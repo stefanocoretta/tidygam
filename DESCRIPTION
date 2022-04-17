@@ -13,8 +13,10 @@ Description: Provides tidy functions for getting predictions and plotting Genera
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports: dplyr,
+Imports: cli,
+    dplyr,
     ggplot2,
+    glue,
     insight,
     magrittr,
     mgcv,
@@ -26,3 +28,4 @@ Suggests: knitr,
 VignetteBuilder: knitr
 Language: en_GB
 RoxygenNote: 7.1.2
+Roxygen: list(markdown = TRUE)

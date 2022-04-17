@@ -14,30 +14,31 @@ predict_gam(
 )
 }
 \arguments{
-\item{model}{A `gam` or `bam` model object.}
+\item{model}{A \code{gam} or \code{bam} model object.}
 
 \item{length_out}{An integer indicating how many values to use along the
-numeric variables for predicting the response (the default is `10`).}
+numeric variables for predicting the response (the default is \code{10}).}
 
 \item{values}{User supplied values for specific variables as a named list.}
 
 \item{series}{A string specifying the variable that corresponds to the series
 to be plotted on the $x$-axis. If a string is given, the other numeric
 variables in the model are set to their mean value, unless specific values
-are given in `values`.}
+are given in \code{values}.}
 
 \item{exclude_terms}{Terms to be excluded from the prediction. Term names
 should be given as they appear in the model summary (for example,
-`"s(x0,x1)"`).}
+\code{"s(x0,x1)"}).}
 
-\item{ci_z}{The z-value for calculating the CIs (the default is `1.96` for
-95\% CI).}
+\item{ci_z}{The z-value for calculating the CIs (the default is \code{1.96} for
+95\\% CI).}
 }
 \value{
 A tibble with predictions.
 }
 \description{
-Get predictions from a GAM model
+Return predictions from a GAM model generated with 'mgcv'. The output can be
+plotted with \code{plot()}.
 }
 \examples{
 library(mgcv)
