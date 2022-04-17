@@ -148,7 +148,12 @@ predict_gam <- function(model, length_out = 10, values = NULL,
   pred_out$upper_ci <- fit + se * ci_z
 
   class(pred_out) <- c("tidygam", class(pred_out))
-  attr(pred_out, "reponse") <- response
+  attr(pred_out, "response") <- response
+  if (is.null(series)) {
+    attr(pred_out, "series") <- character()
+  } else {
+    attr(pred_out, "series") <- series
+  }
 
   return(pred_out)
 }
