@@ -1,4 +1,4 @@
-#' Title
+#' Get predictions from a GAM model
 #'
 #' @param model A `gam` or `bam` model object.
 #' @param length_out An integer indicating how many values to use along the

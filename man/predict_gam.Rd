@@ -2,7 +2,7 @@
 % Please edit documentation in R/predict.R
 \name{predict_gam}
 \alias{predict_gam}
-\title{Title}
+\title{Get predictions from a GAM model}
 \usage{
 predict_gam(
   model,
@@ -37,7 +37,7 @@ should be given as they appear in the model summary (for example,
 A tibble with predictions.
 }
 \description{
-Title
+Get predictions from a GAM model
 }
 \examples{
 library(mgcv)
