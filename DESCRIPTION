@@ -1,0 +1,28 @@
+Package: tidygam
+Type: Package
+Title: Tidy Prediction and Plotting of Generalised Additive Models
+Version: 0.0.0.9000
+Date: 2022-04-17
+Authors@R: 
+    c(person(given = "Stefano",
+             family = "Coretta",
+             email = paste0("stefano.coretta", "@", "gmail.com"),
+             role = c("aut", "cre")))
+Description: Provides tidy functions for getting predictions and plotting Generalised
+    Additive Models (GAMs).
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: dplyr,
+    ggplot2,
+    insight,
+    magrittr,
+    mgcv,
+    rlang,
+    tibble,
+    tidyr
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Language: en_GB
+RoxygenNote: 7.1.2
