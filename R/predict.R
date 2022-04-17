@@ -1,5 +1,8 @@
 #' Get predictions from a GAM model
 #'
+#' Return predictions from a GAM model generated with 'mgcv'. The output can be
+#' plotted with `plot()`.
+#'
 #' @param model A `gam` or `bam` model object.
 #' @param length_out An integer indicating how many values to use along the
 #'   numeric variables for predicting the response (the default is `10`).
