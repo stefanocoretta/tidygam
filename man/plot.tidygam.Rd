@@ -4,10 +4,10 @@
 \alias{plot.tidygam}
 \title{Plot methods for tidygam objects}
 \usage{
-\method{plot}{tidygam}(gam_pred, series = NULL, comparison = NULL)
+\method{plot}{tidygam}(x, series = NULL, comparison = NULL, raster_interp = FALSE, ...)
 }
 \arguments{
-\item{gam_pred}{A \code{tidygam} object (see \code{\link[=predict_gam]{predict_gam()}}).}
+\item{x}{A \code{tidygam} object (see \code{\link[=predict_gam]{predict_gam()}}).}
 
 \item{series}{A string specifying the variable that corresponds to the series
 to be plotted on the $x$-axis. If a string is given, the other numeric
@@ -17,6 +17,12 @@ two variables will be taken as the elements of a tensor product smooth.
 This allows the user to plot 2D raster plots.}
 
 \item{comparison}{Name of a categorical predictor to compare as a string.}
+
+\item{raster_interp}{Whether to linearly interpolate when plotting a tensor
+product smooth/interaction. It makes sense only when \code{series} has two
+variables. The default is \code{FALSE}.}
+
+\item{...}{Arguments passed to \code{plot()}.}
 }
 \value{
 A \code{ggplot} object.
@@ -29,11 +35,16 @@ library(mgcv)
 set.seed(10)
 sim_data <- gamSim(4)
 
-model <- gam(y ~ s(x2, by = fac) + s(x0), data = sim_data)
+model_1 <- gam(y ~ s(x2, by = fac) + s(x0), data = sim_data)
 
-preds <- predict_gam(model, length_out = 50, exclude_terms = "s(x0)")
-plot(preds, "x2")
+preds_1 <- predict_gam(model_1, length_out = 50, exclude_terms = "s(x0)")
+plot(preds_1, "x2")
 
-preds_2 <- predict_gam(model, length_out = 100, values = list(x0 = 0))
+preds_2 <- predict_gam(model_1, length_out = 100, values = list(x0 = 0))
 plot(preds_2, "x2", "fac")
+
+# Plotting tensor product smooths/interactions
+model_2 <- gam(y ~ te(x0, x2, by = fac), data = sim_data)
+preds_3 <- predict_gam(model_2)
+preds_3 \%>\% plot(series = c("x0", "x2"), comparison = "fac")
 }

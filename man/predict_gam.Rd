@@ -33,14 +33,13 @@ should be given as they appear in the model summary (for example,
 \code{"s(x0,x1)"}).}
 
 \item{ci_z}{The z-value for calculating the CIs (the default is \code{1.96} for
-95\\% CI).}
+95 percent CI).}
 }
 \value{
 A tibble with predictions.
 }
 \description{
-Return predictions from a GAM model generated with 'mgcv'. The output can be
-plotted with \code{plot()}.
+Return predictions from a GAM model generated with mgcv. The output can be plotted with \code{plot()}.
 }
 \examples{
 library(mgcv)

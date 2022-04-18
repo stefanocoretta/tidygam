@@ -1,7 +1,6 @@
 #' Get predictions from a GAM model
 #'
-#' Return predictions from a GAM model generated with 'mgcv'. The output can be
-#' plotted with `plot()`.
+#' Return predictions from a GAM model generated with mgcv. The output can be plotted with `plot()`.
 #'
 #' @param model A `gam` or `bam` model object.
 #' @param length_out An integer indicating how many values to use along the
@@ -17,10 +16,11 @@
 #'   should be given as they appear in the model summary (for example,
 #'   `"s(x0,x1)"`).
 #' @param ci_z The z-value for calculating the CIs (the default is `1.96` for
-#'   95\% CI).
+#'   95 percent CI).
 #'
 #' @return A tibble with predictions.
 #' @export
+#'
 #' @examples
 #' library(mgcv)
 #' set.seed(10)

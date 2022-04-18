@@ -22,7 +22,8 @@ Imports: cli,
     mgcv,
     rlang,
     tibble,
-    tidyr
+    tidyr,
+    tidyselect
 Suggests: knitr,
     rmarkdown
 VignetteBuilder: knitr
