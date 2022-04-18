@@ -12,7 +12,9 @@
 \item{series}{A string specifying the variable that corresponds to the series
 to be plotted on the $x$-axis. If a string is given, the other numeric
 variables in the model are set to their mean value, unless specific values
-are given in \code{values}.}
+are given in \code{values}. If a character vector of two strings is given, the
+two variables will be taken as the elements of a tensor product smooth.
+This allows the user to plot 2D raster plots.}
 
 \item{comparison}{Name of a categorical predictor to compare as a string.}
 }

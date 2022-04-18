@@ -24,7 +24,9 @@ numeric variables for predicting the response (the default is \code{10}).}
 \item{series}{A string specifying the variable that corresponds to the series
 to be plotted on the $x$-axis. If a string is given, the other numeric
 variables in the model are set to their mean value, unless specific values
-are given in \code{values}.}
+are given in \code{values}. If a character vector of two strings is given, the
+two variables will be taken as the elements of a tensor product smooth.
+This allows the user to plot 2D raster plots.}
 
 \item{exclude_terms}{Terms to be excluded from the prediction. Term names
 should be given as they appear in the model summary (for example,

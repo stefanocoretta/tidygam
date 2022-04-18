@@ -10,7 +10,9 @@
 #' @param series A string specifying the variable that corresponds to the series
 #'   to be plotted on the $x$-axis. If a string is given, the other numeric
 #'   variables in the model are set to their mean value, unless specific values
-#'   are given in `values`.
+#'   are given in `values`. If a character vector of two strings is given, the
+#'   two variables will be taken as the elements of a tensor product smooth.
+#'   This allows the user to plot 2D raster plots.
 #' @param exclude_terms Terms to be excluded from the prediction. Term names
 #'   should be given as they appear in the model summary (for example,
 #'   `"s(x0,x1)"`).
@@ -99,7 +101,7 @@ predict_gam <- function(model, length_out = 10, values = NULL,
     } else {
       if (is.numeric(the_data[[x]])) {
         if (!is.null(series)) {
-          if (x == series) {
+          if (x %in% series) {
             min_x <- range(the_data[[x]])[[1]]
             max_x <- range(the_data[[x]])[[2]]
             range <- max_x - min_x
