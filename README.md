@@ -4,6 +4,8 @@
 # tidygam: Tidy Prediction and Plotting of Generalised Additive Models
 
 <!-- badges: start -->
+
+[![](https://img.shields.io/badge/devel%20version-0.0.0.9000-orange.svg)](https://github.com/stefanocoretta/tidygam)
 <!-- badges: end -->
 
 With tidygam, users can more easily obtain predictions from Generalised

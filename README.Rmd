@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # tidygam: Tidy Prediction and Plotting of Generalised Additive Models
 
 <!-- badges: start -->
+`r badger::badge_devel(color = "orange")`
 <!-- badges: end -->
 
 With tidygam, users can more easily obtain predictions from Generalised Additive Models (GAMs) and plot them, using tidyverse tools.

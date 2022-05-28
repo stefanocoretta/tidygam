@@ -8,7 +8,18 @@
       }
     ]
   },
+  "Bioconductor": {
+    "Version": "3.15"
+  },
   "Packages": {
+    "BiocManager": {
+      "Package": "BiocManager",
+      "Version": "1.30.18",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "b1a93bed5debda5775636086fdca017b",
+      "Requirements": []
+    },
     "DBI": {
       "Package": "DBI",
       "Version": "1.1.2",
@@ -92,6 +103,19 @@
       "Repository": "CRAN",
       "Hash": "c39fbec8a30d23e721980b8afb31984c",
       "Requirements": []
+    },
+    "badger": {
+      "Package": "badger",
+      "Version": "0.2.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "a89c4a552f39daa5b2ced662fcf4ce82",
+      "Requirements": [
+        "desc",
+        "dlstats",
+        "rvcheck",
+        "usethis"
+      ]
     },
     "base64enc": {
       "Package": "base64enc",
@@ -441,6 +465,20 @@
       "Repository": "CRAN",
       "Hash": "cf6b206a045a684728c3267ef7596190",
       "Requirements": []
+    },
+    "dlstats": {
+      "Package": "dlstats",
+      "Version": "0.1.5",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "73932ec955228bb5d6b1c06dff3b2481",
+      "Requirements": [
+        "RColorBrewer",
+        "ggplot2",
+        "jsonlite",
+        "magrittr",
+        "scales"
+      ]
     },
     "dplyr": {
       "Package": "dplyr",
@@ -1341,6 +1379,17 @@
         "yaml"
       ]
     },
+    "rvcheck": {
+      "Package": "rvcheck",
+      "Version": "0.2.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "fee46a3924e5522b01138accbe6ff804",
+      "Requirements": [
+        "BiocManager",
+        "yulab.utils"
+      ]
+    },
     "rversions": {
       "Package": "rversions",
       "Version": "2.1.1",
@@ -1770,6 +1819,14 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "458bb38374d73bf83b1bb85e353da200",
+      "Requirements": []
+    },
+    "yulab.utils": {
+      "Package": "yulab.utils",
+      "Version": "0.0.4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "922e11dcf40bb5dfcf3fe5e714d0dc35",
       "Requirements": []
     },
     "zip": {
