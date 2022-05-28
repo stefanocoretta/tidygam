@@ -17,6 +17,7 @@
 #'   `"s(x0,x1)"`).
 #' @param ci_z The z-value for calculating the CIs (the default is `1.96` for
 #'   95 percent CI).
+#' @param tran_fun Function to use for transforming the predicted values and CIs.
 #'
 #' @return A tibble with predictions.
 #' @export
@@ -24,19 +25,28 @@
 #' @examples
 #' library(mgcv)
 #' set.seed(10)
-#' sim_data <- gamSim(1, n = 200, scale = 2)
-#' model <- gam(y ~ x0 + s(I(x1^2)) + s(x2) + offset(x3), data = sim_data)
+#'
+#' sim_data_1 <- gamSim(1, n = 200, scale = 2)
+#' model <- gam(y ~ x0 + s(I(x1^2)) + s(x2) + offset(x3), data = sim_data_1)
 #' predict_gam(model)
-#' predict_gam(model, values = list(x0 = mean(sim_data$x0)))
+#' predict_gam(model, values = list(x0 = mean(sim_data_1$x0)))
 #' predict_gam(model, series = "x2")
 #' predict_gam(model, exclude_terms = "s(I(x1^2))")
 #'
-#' sim_data <- gamSim(4)
-#' model_2 <- gam(y ~ s(x2, by = fac) + s(x0), data = sim_data)
+#' # By-variables
+#' sim_data_2 <- gamSim(4)
+#' model_2 <- gam(y ~ s(x2, by = fac) + s(x0), data = sim_data_2)
 #' predict_gam(model_2)
+#'
+#' # Poisson data
+#' sim_data_3 <- sim_data_2
+#' sim_data_3$y <- round(sim_data_2$y) + 20
+#' model_3 <- gam(y ~ s(x2, by = fac), data = sim_data_3, family = poisson)
+#' predict_gam(model_3, length_out = 50)
+#' predict_gam(model_3, length_out = 50, tran_fun = exp)
 predict_gam <- function(model, length_out = 10, values = NULL,
                         series = NULL, exclude_terms = NULL,
-                        ci_z = 1.96) {
+                        ci_z = 1.96, tran_fun = NULL) {
   the_data <- insight::get_data(model)
   predictors <- insight::find_predictors(model, flatten = TRUE)
   response <- insight::find_response(model)
@@ -153,10 +163,18 @@ predict_gam <- function(model, length_out = 10, values = NULL,
   }
 
   pred_out <- pred_grid
-  pred_out[[response]] <- fit
-  pred_out$se <- se
-  pred_out$lower_ci <- fit - se * ci_z
-  pred_out$upper_ci <- fit + se * ci_z
+
+  if (!is.null(tran_fun)) {
+    pred_out[[response]] <- tran_fun(fit)
+    pred_out$se <- se
+    pred_out$lower_ci <- tran_fun(fit - se * ci_z)
+    pred_out$upper_ci <- tran_fun(fit + se * ci_z)
+  } else {
+    pred_out[[response]] <- fit
+    pred_out$se <- se
+    pred_out$lower_ci <- fit - se * ci_z
+    pred_out$upper_ci <- fit + se * ci_z
+  }
 
   class(pred_out) <- c("tidygam", class(pred_out))
   attr(pred_out, "response") <- response
