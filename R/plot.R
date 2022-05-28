@@ -51,10 +51,18 @@ plot.tidygam <- function(x, series = NULL, comparison = NULL,
     groupings <- dplyr::select(
       x,
       -.data$se, -.data$lower_ci, -.data$upper_ci, -.data[[series]], -.data[[response]]
-    ) %>%
-      dplyr::rowwise() %>%
-      tidyr::unite("groupings", tidyselect::everything()) %>%
-      dplyr::pull(groupings)
+    )
+
+    # Check that there are variables to group by. If not, create a dummy
+    # grouping variable with just 1s.
+    if (dim(groupings)[2] > 0) {
+      groupings %>%
+        dplyr::rowwise() %>%
+        tidyr::unite("groupings", tidyselect::everything()) %>%
+        dplyr::pull(groupings)
+    } else {
+      groupings <- 1
+    }
 
     x$groupings <- groupings
 
