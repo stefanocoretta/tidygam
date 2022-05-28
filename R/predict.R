@@ -73,7 +73,13 @@ predict_gam <- function(model, length_out = 10, values = NULL,
       values[[which(names(values) == x)]]
     } else if (!is.null(offset_var)) {
       if (x == offset_var) {
-        0
+        # If rate ratios are used in the offset, i.e. if log() is used,
+        # then the offset needs to be 1. log(0) would be -Inf.
+        if (stringr::str_detect(offset_term, "log")) {
+          1
+        } else {
+          0
+        }
       } else {
         # TODO: fix code repetition (see last else in the chain)
         if (is.numeric(the_data[[x]])) {
