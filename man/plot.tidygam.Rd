@@ -42,6 +42,10 @@ plot(preds_1, "x2")
 
 preds_2 <- predict_gam(model_1, length_out = 100, values = list(x0 = 0))
 plot(preds_2, "x2", "fac")
+library(ggplot2)
+plot(preds_2, "x2", "fac") +
+  scale_fill_brewer(type = "qual") +
+  scale_color_brewer(type = "qual")
 
 # Plotting tensor product smooths/interactions
 model_2 <- gam(y ~ te(x0, x2, by = fac), data = sim_data)
