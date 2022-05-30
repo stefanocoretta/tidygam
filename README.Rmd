@@ -23,11 +23,18 @@ With tidygam, users can more easily obtain predictions from Generalised Additive
 
 ## Installation
 
-You can install the development version of tidygam from [GitHub](https://github.com/) with:
+You can install the latest release of tidygam from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("remotes")
-remotes::install_github("stefanocoretta/tidygam")
+remotes::install_github("stefanocoretta/tidygam@v0.1.0")
+```
+
+Alternatively, you can install the development version:
+
+``` r
+# install.packages("remotes")
+remotes::install_github("stefanocoretta/tidygam@devel")
 ```
 
 ## Examples
