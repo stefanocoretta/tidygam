@@ -2,6 +2,7 @@
 
 S3method(plot,tidygam)
 export("%>%")
+export(get_difference)
 export(predict_gam)
 importFrom(magrittr,"%>%")
 importFrom(rlang,.data)
