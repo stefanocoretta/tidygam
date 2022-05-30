@@ -56,7 +56,7 @@ plot.tidygam <- function(x, series = NULL, comparison = NULL,
     # Check that there are variables to group by. If not, create a dummy
     # grouping variable with just 1s.
     if (dim(groupings)[2] > 0) {
-      groupings %>%
+      groupings <- groupings %>%
         dplyr::rowwise() %>%
         tidyr::unite("groupings", tidyselect::everything()) %>%
         dplyr::pull(groupings)
