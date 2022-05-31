@@ -2,7 +2,7 @@
 % Please edit documentation in R/plot.R
 \name{plot.tidygam.diff}
 \alias{plot.tidygam.diff}
-\title{Title}
+\title{Plot methods for tidygam.diff objects}
 \usage{
 \method{plot}{tidygam.diff}(x, ..., sig = TRUE, sig_col = "red", sig_alpha = 0.25)
 }
@@ -21,7 +21,7 @@
 A \code{ggplot} object.
 }
 \description{
-Title
+Plotting methods for \code{tidygam.diff} objects.
 }
 \examples{
 library(mgcv)

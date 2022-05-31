@@ -111,7 +111,9 @@ plot.tidygam <- function(x, series = NULL, comparison = NULL,
 }
 
 
-#' Title
+#' Plot methods for tidygam.diff objects
+#'
+#' Plotting methods for `tidygam.diff` objects.
 #'
 #' @param x A `tidygam.diff` object (see [get_difference()]).
 #' @param ... Arguments passed to `plot()`.
