@@ -18,6 +18,7 @@ LazyData: true
 Imports: cli,
     dplyr,
     ggplot2,
+    glue,
     insight,
     magrittr,
     mgcv,

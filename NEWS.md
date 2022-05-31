@@ -1,8 +1,10 @@
 # tidygam 0.1.0.9000
 
-## Add
+## Added
 
 * `get_difference()` returns difference between two smooths.
+
+* `plot.tidygam.diff` method to plot difference smooth.
 
 
 # tidygam 0.1.0

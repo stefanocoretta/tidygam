@@ -109,3 +109,53 @@ plot.tidygam <- function(x, series = NULL, comparison = NULL,
 
 
 }
+
+
+#' Title
+#'
+#' @param x A `tidygam.diff` object (see [get_difference()]).
+#' @param ... Arguments passed to `plot()`.
+#' @param sig Shade the interval(s) where the difference smooth does not include 0 (default is `TRUE`).
+#' @param sig_col Colour for the shading (default is `"red"`).
+#' @param sig_alpha Alpha level for the shading (default is `0.25`)
+#'
+#' @return A `ggplot` object.
+#' @export
+#'
+#' @examples
+#' library(mgcv)
+#' set.seed(10)
+#' data <- gamSim(4)
+#' model <- gam(y ~ s(x2, by = fac) + s(x0), data = data)
+#'
+#' model_diff <- get_difference(model, "x2", list(fac = c("1", "2")))
+#' plot(model_diff)
+plot.tidygam.diff <- function(x, ..., sig = TRUE, sig_col = "red", sig_alpha = 0.25) {
+  response <- attr(x, "response")
+  series <- attr(x, "series")
+  compare <- attr(x, "compare")
+  sig_int <- attr(x, "sig_int")
+
+  x %>%
+    ggplot2::ggplot(
+      ggplot2::aes(
+        .data[[series]],
+        .data$diff
+      )
+    ) +
+    ggplot2::geom_hline(yintercept = 0, alpha = 0.5) +
+    {if (sig) {
+      ggplot2::annotate(
+        "rect",
+        xmin = sig_int$start, xmax = sig_int$end,
+        ymin = -Inf, ymax = Inf, alpha = sig_alpha,
+        fill = sig_col
+      )
+    }} +
+    ggplot2::geom_ribbon(ggplot2::aes(ymin = .data$lower_ci, ymax = .data$upper_ci), alpha = 0.5) +
+    ggplot2::geom_path() +
+    ggplot2::geom_point(size = 0.5) +
+    ggplot2::labs(
+      y = glue::glue("Difference of {compare[[1]][1]} and {compare[[1]][2]} ({names(compare[1])})")
+    )
+}
