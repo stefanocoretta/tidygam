@@ -6,6 +6,7 @@
 
 * `plot.tidygam.diff` method to plot difference smooth.
 
+* Data `gest` and `struct`.
 
 # tidygam 0.1.0
 

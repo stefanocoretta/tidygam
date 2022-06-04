@@ -1,0 +1,39 @@
+---
+title: "Prepare data"
+author: "Stefano Coretta"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = here::here())
+library(tidyverse)
+```
+
+```{r gest}
+gest <- read_csv("https://raw.githubusercontent.com/stefanocoretta/infant-gestures/master/data/gestures.csv") %>%
+  select(-ends_with("_raw"), -ct, -pro_rata) %>%
+  group_by(dyad, background, months, gesture) %>%
+  summarise(
+    count = sum(count, na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  mutate(across(where(is.character), as.factor))
+
+usethis::use_data(gest, overwrite = TRUE)
+```
+
+```{r struct, eval=FALSE}
+# Not run due to very large file.
+#
+# struct <- read_csv("https://osf.io/nqaz6/download") %>%
+#   filter(
+#     electrode == 62,
+#     t %% 10 == 0
+#   )  %>%
+#  mutate(across(where(is.character), as.factor))
+
+usethis::use_data(struct, overwrite = TRUE)
+```
+

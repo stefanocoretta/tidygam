@@ -34,3 +34,5 @@ VignetteBuilder: knitr
 Language: en_GB
 RoxygenNote: 7.2.0
 Roxygen: list(markdown = TRUE)
+Depends: 
+    R (>= 2.10)
