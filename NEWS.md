@@ -8,6 +8,13 @@
 
 * Data `gest` and `struct`.
 
+## Fixed
+
+* Error when predicting bivariate smooths (`s/te/ti()`, `fs/re` basis functions) where only the first variable was returned internally.
+
+
+
+
 # tidygam 0.1.0
 
 * First minor release of the package.

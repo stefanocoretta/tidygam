@@ -44,6 +44,10 @@
 #' model_3 <- gam(y ~ s(x2, by = fac), data = sim_data_3, family = poisson)
 #' predict_gam(model_3, length_out = 50)
 #' predict_gam(model_3, length_out = 50, tran_fun = exp)
+#'
+#' # Bivariate smooths
+#' model_4 <- gam(y ~ te(x1, x2), data = sim_data_1)
+#' predict_gam(model_4)
 predict_gam <- function(model, length_out = 10, values = NULL,
                         series = NULL, exclude_terms = NULL,
                         ci_z = 1.96, tran_fun = NULL) {
@@ -55,10 +59,9 @@ predict_gam <- function(model, length_out = 10, values = NULL,
   pterms <- model[["pterms"]]
   smooths <- model[["smooth"]]
 
-  smooths_terms <- unlist(lapply(smooths, function(x) x$label))
-  smooths_vars <- unlist(lapply(smooths, function(x) x$term))
+  smooths_terms <- lapply(smooths, function(x) x$label)
+  smooths_vars <- lapply(smooths, function(x) x$term)
 
-  excluded_vars <- NULL
   offset_var <- NULL
 
   offset_idx <- attr(pterms, "offset")
@@ -69,11 +72,22 @@ predict_gam <- function(model, length_out = 10, values = NULL,
   }
 
   if (!is.null(exclude_terms)) {
+    term_idxs <- NULL
     for (term in exclude_terms) {
-      term_idx <- which(smooths_terms == term)
-      term_var <- insight::clean_names(smooths_vars[term_idx])
-      excluded_vars <- c(excluded_vars, term_var)
+      term_idxs <- c(term_idxs, which(smooths_terms == term))
     }
+
+    to_exclude <- unique(
+      unlist(
+        lapply(smooths_vars[term_idxs], function(x) insight::clean_names(x))
+      )
+    )
+    to_keep <- unique(
+      unlist(
+        lapply(smooths_vars[-term_idxs], function(x) insight::clean_names(x))
+      )
+    )
+    excluded_vars <- setdiff(to_exclude, to_keep)
 
     predictors <- predictors[-which(predictors %in% excluded_vars)]
   }

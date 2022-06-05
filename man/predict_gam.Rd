@@ -66,4 +66,8 @@ sim_data_3$y <- round(sim_data_2$y) + 20
 model_3 <- gam(y ~ s(x2, by = fac), data = sim_data_3, family = poisson)
 predict_gam(model_3, length_out = 50)
 predict_gam(model_3, length_out = 50, tran_fun = exp)
+
+# Bivariate smooths
+model_4 <- gam(y ~ te(x1, x2), data = sim_data_1)
+predict_gam(model_4)
 }
