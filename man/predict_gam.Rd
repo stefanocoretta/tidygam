@@ -11,7 +11,9 @@ predict_gam(
   series = NULL,
   exclude_terms = NULL,
   ci_z = 1.96,
-  tran_fun = NULL
+  tran_fun = NULL,
+  separate = NULL,
+  sep_by = "\\\\."
 )
 }
 \arguments{
@@ -37,6 +39,10 @@ should be given as they appear in the model summary (for example,
 95 percent CI).}
 
 \item{tran_fun}{Function to use for transforming the predicted values and CIs.}
+
+\item{separate}{Names list of factor interaction variables to be separated.}
+
+\item{sep_by}{Character to separate by (the default is \verb{\\\\.}).}
 }
 \value{
 A tibble with predictions.

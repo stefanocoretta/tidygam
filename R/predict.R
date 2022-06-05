@@ -18,6 +18,8 @@
 #' @param ci_z The z-value for calculating the CIs (the default is `1.96` for
 #'   95 percent CI).
 #' @param tran_fun Function to use for transforming the predicted values and CIs.
+#' @param separate Names list of factor interaction variables to be separated.
+#' @param sep_by Character to separate by (the default is `\\.`).
 #'
 #' @return A tibble with predictions.
 #' @export
@@ -50,7 +52,8 @@
 #' predict_gam(model_4)
 predict_gam <- function(model, length_out = 10, values = NULL,
                         series = NULL, exclude_terms = NULL,
-                        ci_z = 1.96, tran_fun = NULL) {
+                        ci_z = 1.96, tran_fun = NULL,
+                        separate = NULL, sep_by = "\\.") {
   the_data <- insight::get_data(model)
   predictors <- insight::find_predictors(model, flatten = TRUE)
   response <- insight::find_response(model)
@@ -188,6 +191,17 @@ predict_gam <- function(model, length_out = 10, values = NULL,
     pred_out$se <- se
     pred_out$lower_ci <- fit - se * ci_z
     pred_out$upper_ci <- fit + se * ci_z
+  }
+
+  if (!is.null(separate)) {
+    for (var in 1:length(separate)) {
+      pred_out <- tidyr::separate(
+        pred_out,
+        .data[[names(separate[var])]],
+        separate[[var]],
+        sep = sep_by
+      )
+    }
   }
 
   class(pred_out) <- c("tidygam", class(pred_out))
