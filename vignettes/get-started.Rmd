@@ -1,0 +1,100 @@
+---
+title: "Get started"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Get started}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(tidygam)
+library(mgcv)
+library(tidyverse)
+```
+
+```{r}
+data("gest")
+```
+
+```{r}
+gs <- gam(
+  count ~ s(months, k = 3),
+  data = gest,
+  family = poisson
+)
+```
+
+```{r}
+gs_pred <- predict_gam(gs)
+gs_pred
+```
+
+```{r}
+gs_pred %>%
+  plot(series = "months")
+```
+
+```{r}
+predict_gam(gs, tran_fun = exp) %>%
+  plot(series = "months")
+```
+
+```{r}
+gest <- gest %>%
+  mutate(back_gest = interaction(background, gesture))
+
+gs_4 <- gam(
+  count ~ s(months, by = back_gest, k = 3),
+  data = gest,
+  family = poisson
+)
+```
+
+```{r}
+predict_gam(
+  gs_4, tran_fun = exp,
+  separate = list(back_gest = c("background", "gesture"))
+) %>%
+  plot(series = "months", comparison = "gesture") +
+  facet_grid(~ background)
+```
+
+```{r}
+data("struct")
+
+struct
+```
+
+```{r}
+struct <- struct %>%
+  mutate(stim_gram = interaction(stimulus.condition, grammar.condition))
+
+st <- bam(
+  voltage ~
+    s(t, by = stim_gram, k = 5) +
+    s(t, subject, bs = "fs", m = 1),
+  data = struct
+)
+```
+
+```{r}
+predict_gam(
+  st,
+  length_out = 50,
+  series = "t",
+  exclude_terms = "s(t,subject)",
+  separate = list(stim_gram = c("stimulus", "grammar"))
+) %>%
+  plot(comparison = "grammar") +
+  geom_hline(yintercept = 0) +
+  facet_grid(~ stimulus)
+```
+
