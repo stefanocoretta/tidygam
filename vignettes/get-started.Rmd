@@ -10,7 +10,8 @@ vignette: >
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  fig.width = 7
 )
 ```
 
@@ -18,58 +19,137 @@ knitr::opts_chunk$set(
 library(tidygam)
 library(mgcv)
 library(tidyverse)
+theme_set(theme_light())
 ```
 
-```{r}
+# Overview
+
+The tidymv package offers two main user-oriented functions:
+
+- `predict_gam()`: returns predictions of the outcome variable based on the predictors in the GAM model. The user can specify specific values for any predictor, and exclude model terms.
+
+- `get_difference()`: returns the difference between two smooths and those intervals along the smooth that do not include 0.
+
+The output of these function can then be plotted with `plot()`, through the methods `plot.tidygam()` and `plot.tidygam.diff()`.
+
+# Basic model prediction
+
+Let's start with a simple model and get model-bsed predictions.
+
+We will use the `gest` data table, available in tidygam.
+The table consists of counts of gestures performed by infants of three cultural backgrounds who participating in a longitudinal study (see `?gest` for details and references).
+
+```{r gest}
 data("gest")
+gest
 ```
 
-```{r}
+The following GAM models the overall trend in number of gestures from 10 to 12 months of age.
+
+```{r gs}
 gs <- gam(
   count ~ s(months, k = 3),
   data = gest,
   family = poisson
 )
+
+summary(gs)
 ```
 
-```{r}
+Now we can obtain the predicted counts with `predict_gam()`.
+
+```{r gs-pred}
 gs_pred <- predict_gam(gs)
 gs_pred
 ```
 
-```{r}
+# Plot predicted values
+
+`predict_gam()` returns an object of class `tidygam`, which can be plotted with `plot()`.
+
+The user has to specify the "series" used as the *x*-axis.
+The outcome variable is automatically selected for the *y*-axis.
+
+```{r gs-pred-plot}
 gs_pred %>%
   plot(series = "months")
 ```
 
-```{r}
+Since the `gs` model used a log-link function, the output of `predict_gam()` is in log-odds, rather than in counts.
+
+We can convert the log-odds to counts by exponentiating them.
+The `tran_fun` argument allows the user to specify a function to transform the predicted outcome values with.
+
+```{r gs-pred-exp}
 predict_gam(gs, tran_fun = exp) %>%
   plot(series = "months")
 ```
 
-```{r}
+# Models with `by`-variables
+
+Smooths can be fitted to different levels of a factor using so-called `by`-variables, specified within the smooth function `s()` with the `by` argument.
+
+In this model, we fit a smooth along `months` for each background in the data.
+
+```{r gs-by}
+gs_by <- gam(
+  count ~ s(months, by = background, k = 3),
+  data = gest,
+  family = poisson
+)
+
+summary(gs_by)
+```
+
+The predictor for comparison is selected with the `comparison` argument in `plot()`.
+
+```{r gs-by-comp}
+gs_by %>%
+  predict_gam(length_out = 20, series = "months", tran_fun = exp) %>%
+  plot(comparison = "background")
+```
+
+Note that the output of `plot()` is a ggplot2 object, which can be modified using the ggplot2 machinery.
+
+```{r gs-by-comp-2}
+gs_by %>%
+  predict_gam(length_out = 20, series = "months", tran_fun = exp) %>%
+  plot(comparison = "background") +
+  scale_color_brewer(type = "qual") + scale_fill_brewer(type = "qual")
+```
+
+# Models with factor interactions
+
+Classical interactions between factors as usually obtained in linear models with the `:` syntax (e.g. `background:gesture`) are not possible in GAMs.
+
+An alternative way to specify what are called interactions in generalised linear models is by creating a new factor which is the interaction of the two or more factors using the `interaction()` function, and include this "factor interaction" predictors as a `by`-variable.
+
+```{r gs-i}
 gest <- gest %>%
   mutate(back_gest = interaction(background, gesture))
 
-gs_4 <- gam(
+gs_i <- gam(
   count ~ s(months, by = back_gest, k = 3),
   data = gest,
   family = poisson
 )
+
+summary(gs_i)
 ```
 
-```{r}
+```{r gs-i-plot}
 predict_gam(
-  gs_4, tran_fun = exp,
+  gs_i, tran_fun = exp,
   separate = list(back_gest = c("background", "gesture"))
 ) %>%
   plot(series = "months", comparison = "gesture") +
   facet_grid(~ background)
 ```
 
+# Models with factor smooth interactions (`bs = "fs"`) 
+
 ```{r}
 data("struct")
-
 struct
 ```
 
