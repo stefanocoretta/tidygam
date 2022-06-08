@@ -27,10 +27,12 @@ usethis::use_data(gest, overwrite = TRUE)
 ```{r struct, eval=FALSE}
 # Not run due to very large file.
 #
+# set.seed(101)
 # struct <- read_csv("https://osf.io/nqaz6/download") %>%
 #   filter(
 #     electrode == 62,
-#     t %% 10 == 0
+#     t %% 10 == 0,
+#     subject %in% sort(as.character(sample(unique(struct$subject), 10)))
 #   )  %>%
 #  mutate(across(where(is.character), as.factor))
 
