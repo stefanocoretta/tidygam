@@ -18,7 +18,8 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(tidygam)
 library(mgcv)
-library(tidyverse)
+library(dplyr)
+library(ggplot2)
 theme_set(theme_light())
 ```
 
@@ -118,6 +119,34 @@ gs_by %>%
   scale_color_brewer(type = "qual") + scale_fill_brewer(type = "qual")
 ```
 
+Let's try now a model with both `gesture` and `background` as `by`-variables.
+
+```{r gs-by-2}
+gs_by_2 <- gam(
+  count ~ s(months, by = background, k = 3) +
+    s(months, by = gesture, k = 3),
+  data = gest,
+  family = poisson
+)
+
+summary(gs_by_2)
+```
+
+Note that models like this one are conceptually equivalent to linear models without interactions between the `by`-variables.
+
+This is clear when plotting the predictions: notice how the shapes of the smooths are very similar within each background, and they only differ in slope (this is the effect of including separate `by`-variables).
+
+```{r gs-by-2-plot}
+gs_by_2 %>%
+  predict_gam(length_out = 20, series = "months", tran_fun = exp) %>%
+  plot(comparison = "gesture") +
+  scale_color_brewer(type = "qual") + scale_fill_brewer(type = "qual") +
+  facet_grid(~ background)
+```
+
+
+The following section illustrates how to specify and plot models with the GAM equivalent of classical interactions (e.g. `background * gesture`).
+
 # Models with factor interactions
 
 Classical interactions between factors as usually obtained in linear models with the `:` syntax (e.g. `background:gesture`) are not possible in GAMs.
@@ -137,6 +166,10 @@ gs_i <- gam(
 summary(gs_i)
 ```
 
+When predicting values, the user can use the `separate` argument to specify factor-interaction variables in the model that can be split back into their individual components.
+
+This gives greater flexibility when plotting.
+
 ```{r gs-i-plot}
 predict_gam(
   gs_i, tran_fun = exp,
@@ -148,12 +181,21 @@ predict_gam(
 
 # Models with factor smooth interactions (`bs = "fs"`) 
 
-```{r}
+Factor smooth interactions are the GAM equivalent of random/group-level effects (intercepts and slopes).
+
+Let's work with the `struct` data, which contains event-related potentials measures of subjects listening to music and speech.
+For each type (music vs language), the stimuli were either "grammatical" or "ungrammatical" (i.e. the stimuli either respected structural rules or they did not).
+
+This is a subset of the original data, including voltage values only for electrode 62.
+
+```{r struct}
 data("struct")
 struct
 ```
 
-```{r}
+Let's fit the model with factor smooth interactions (`bs = "fs"`).
+
+```{r st}
 struct <- struct %>%
   mutate(stim_gram = interaction(stimulus.condition, grammar.condition))
 
@@ -163,9 +205,15 @@ st <- bam(
     s(t, subject, bs = "fs", m = 1),
   data = struct
 )
+
+summary(st)
 ```
 
-```{r}
+When predicting values we want to exclude the factor smooth interaction, as we would with random/group-level effects in linear models.
+
+Note that GAM terms to be excluded must be specified as they are named in the output of `summary()`.
+
+```{r st-plot}
 predict_gam(
   st,
   length_out = 50,
@@ -178,3 +226,16 @@ predict_gam(
   facet_grid(~ stimulus)
 ```
 
+If the fs interaction is not removed, the predicted smooth for each individual level in the fs interaction is returned.
+
+```{r st-plot-2}
+predict_gam(
+  st,
+  length_out = 50,
+  series = "t",
+  separate = list(stim_gram = c("stimulus", "grammar"))
+) %>%
+  plot(comparison = "grammar") +
+  geom_hline(yintercept = 0) +
+  facet_grid(~ stimulus)
+```

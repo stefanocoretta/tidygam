@@ -10,6 +10,8 @@
 
 * `separate` and `sep_by` arguments in `predict_gam()` allow the user to separate variables in the model that were created with `interaction()`.
 
+* Vignette `get-started.Rmd`.
+
 ## Fixed
 
 * Error when predicting bivariate smooths (`s/te/ti()`, `fs/re` basis functions) where only the first variable was returned internally.
