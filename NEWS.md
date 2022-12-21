@@ -16,6 +16,8 @@
 
 * Error when predicting bivariate smooths (`s/te/ti()`, `fs/re` basis functions) where only the first variable was returned internally.
 
+* Error when plotting difference smooth with no significant difference (closes #5).
+
 
 
 

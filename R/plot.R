@@ -146,7 +146,8 @@ plot.tidygam.diff <- function(x, ..., sig = TRUE, sig_col = "red", sig_alpha = 0
       )
     ) +
     ggplot2::geom_hline(yintercept = 0, alpha = 0.5) +
-    {if (sig) {
+    # If sig_int is null don't annotate
+    {if (sig & !is.null(sig_int)) {
       ggplot2::annotate(
         "rect",
         xmin = sig_int$start, xmax = sig_int$end,
