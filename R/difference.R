@@ -24,10 +24,9 @@ get_difference <- function(model, series, compare, values = NULL,
   pterms <- model[["pterms"]]
   smooths <- model[["smooth"]]
 
-  smooths_terms <- unlist(lapply(smooths, function(x) x$label))
-  smooths_vars <- unlist(lapply(smooths, function(x) x$term))
+  smooths_terms <- lapply(smooths, function(x) x$label)
+  smooths_vars <- lapply(smooths, function(x) x$term)
 
-  excluded_vars <- NULL
   offset_var <- NULL
 
   offset_idx <- attr(pterms, "offset")
@@ -37,21 +36,9 @@ get_difference <- function(model, series, compare, values = NULL,
     offset_var <- insight::clean_names(offset_term)
   }
 
-  if (!is.null(exclude_terms)) {
-    for (term in exclude_terms) {
-      term_idx <- which(smooths_terms == term)
-      term_var <- insight::clean_names(smooths_vars[term_idx])
-      excluded_vars <- c(excluded_vars, term_var)
-    }
-
-    predictors <- predictors[-which(predictors %in% excluded_vars)]
-  }
-
   pred_grid <- lapply(predictors, function(x) {
     if (x %in% names(values)) {
       values[[which(names(values) == x)]]
-    } else if (x %in% names(compare)) {
-      compare[[1]]
     } else if (!is.null(offset_var)) {
       if (x == offset_var) {
         # If rate ratios are used in the offset, i.e. if log() is used,
@@ -111,12 +98,47 @@ get_difference <- function(model, series, compare, values = NULL,
   })
 
   names(pred_grid) <- predictors
+
+  if (!is.null(exclude_terms)) {
+    term_idxs <- NULL
+    for (term in exclude_terms) {
+      term_idxs <- c(term_idxs, which(smooths_terms == term))
+    }
+
+    to_exclude <- unique(
+      unlist(
+        lapply(smooths_vars[term_idxs], function(x) insight::clean_names(x))
+      )
+    )
+    to_keep <- unique(
+      unlist(
+        lapply(smooths_vars[-term_idxs], function(x) insight::clean_names(x))
+      )
+    )
+    excluded_vars <- setdiff(to_exclude, to_keep)
+
+    # We must pick only one value for the excluded terms (here the first)
+    # so that we get only one predicted difference smooth later.
+    for (var in excluded_vars) {
+      pred_grid[[var]] <- pred_grid[[var]][[1]]
+    }
+  }
+
   pred_grid <- tibble::as_tibble(expand.grid(pred_grid))
   pred_grid_a <- dplyr::filter(pred_grid, .data[[names(compare[1])]] == compare[[1]][1])
   pred_grid_b <- dplyr::filter(pred_grid, .data[[names(compare[1])]] == compare[[1]][2])
 
   pred_a <- mgcv::predict.gam(model, pred_grid_a, type = "lpmatrix")
   pred_b <- mgcv::predict.gam(model, pred_grid_b, type = "lpmatrix")
+
+  if (!is.null(exclude_terms)) {
+    pred_a <- tibble::as_tibble(pred_a) %>%
+      dplyr::mutate(dplyr::across(dplyr::starts_with(exclude_terms), function(x) 0)) %>%
+      as.matrix()
+    pred_b <- tibble::as_tibble(pred_b) %>%
+      dplyr::mutate(dplyr::across(dplyr::starts_with(exclude_terms), function(x) 0)) %>%
+      as.matrix()
+  }
 
   pred_diff <- pred_a - pred_b
   diff <- as.vector(pred_diff %*% stats::coef(model))
