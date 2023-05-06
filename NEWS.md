@@ -18,6 +18,7 @@
 
 * Error when plotting difference smooth with no significant difference (closes #5).
 
+* Error where `get_difference()` did not work when excluding random smooths (closes #8).
 
 
 
