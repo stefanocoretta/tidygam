@@ -35,7 +35,7 @@ The output of these function can then be plotted with `plot()`, through the meth
 
 # Basic model prediction
 
-Let's start with a simple model and get model-bsed predictions.
+Let's start with a simple model and get model-based predictions.
 
 We will use the `gest` data table, available in tidygam.
 The table consists of counts of gestures performed by infants of three cultural backgrounds who participating in a longitudinal study (see `?gest` for details and references).
