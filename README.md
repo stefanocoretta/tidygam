@@ -30,5 +30,5 @@ remotes::install_github("stefanocoretta/tidygam@devel")
 
 ## Examples
 
-For examples, see the documentation of `predict_gam()` and
-`plot.tidygam()`.
+For examples, see the `Get started` vignette and the documentation of
+`predict_gam()` and `plot.tidygam()`.
