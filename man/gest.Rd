@@ -14,7 +14,7 @@ A tibble with 540 observations and 5 variables: \describe{
 }
 }
 \source{
-\url{https://doi.org/10.1111/cdev.13406}
+\doi{10.1111/cdev.13406}
 }
 \usage{
 gest

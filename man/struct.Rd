@@ -14,7 +14,7 @@ A tibble with 17160 observations and 6 variables: \describe{
 }
 }
 \source{
-\url{https://doi.org/10.31234/osf.io/e9w3v}
+\doi{10.31234/osf.io/e9w3v}
 }
 \usage{
 struct

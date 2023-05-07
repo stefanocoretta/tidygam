@@ -11,7 +11,7 @@
 #'   \item{count}{Number of gestures.}
 #'   }
 #'
-#' @source \url{https://doi.org/10.1111/cdev.13406}
+#' @source \doi{10.1111/cdev.13406}
 "gest"
 
 #' ERP to structural violation in music and language
@@ -26,5 +26,5 @@
 #'   \item{grammar.condition}{Structural type (grammatical vs ungrammatical).}
 #'   }
 #'
-#' @source \url{https://doi.org/10.31234/osf.io/e9w3v}
+#' @source \doi{10.31234/osf.io/e9w3v}
 "struct"
