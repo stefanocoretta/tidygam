@@ -2,14 +2,16 @@ Package: tidygam
 Type: Package
 Title: Tidy Prediction and Plotting of Generalised Additive Models
 Version: 0.2.0
-Date: 2023-05-06
+Date: 2023-05-08
 Authors@R: 
     c(person(given = "Stefano",
              family = "Coretta",
              email = paste0("stefano.coretta", "@", "gmail.com"),
              role = c("aut", "cre")))
-Description: Provides tidy functions for getting predictions and plotting Generalised
-    Additive Models (GAMs).
+Description: Provides functions that compute predictions from Generalised
+    Additive Models (GAMs) fitted with 'mgcv' and return them as a tibble.
+    These can be plotted with a generic plot()-method that uses 'ggplot2' or
+    plotted as any other data frame. The main function is predict_gam().
 License: MIT + file LICENSE
 URL: https://github.com/stefanocoretta/tidygam,
     https://stefanocoretta.github.io/tidygam/
