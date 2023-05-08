@@ -1,3 +1,5 @@
+This is a resubmissions that fixes the description field in the DESCRIPTION file as per CRAN submission comments.
+
 ## Test environments
 - R-hub windows-x86_64-devel (r-devel)
 - R-hub ubuntu-gcc-release (r-release)
