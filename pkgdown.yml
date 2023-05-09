@@ -3,7 +3,7 @@ pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
   get-started: get-started.html
-last_built: 2023-05-06T09:25Z
+last_built: 2023-05-09T19:08Z
 urls:
   reference: https://stefanocoretta.github.io/tidygam/reference
   article: https://stefanocoretta.github.io/tidygam/articles
