@@ -1,5 +1,9 @@
 # tidygam 0.2.0.9000
 
+## Developer
+
+* Update renv.
+
 
 
 # tidygam 0.2.0
