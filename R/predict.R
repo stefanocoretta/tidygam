@@ -161,12 +161,14 @@ predict_gam <- function(model, length_out = 10, values = NULL,
   preds <- mgcv::predict.gam(model, pred_grid, type = "lpmatrix")
 
   if (!is.null(exclude_terms)) {
-    preds[,which(stringr::str_detect(colnames(preds), stringr::fixed(excluded_vars)))] <- 0
+    for (to_set in exclude_terms) {
+      preds[,which(stringr::str_detect(colnames(preds), stringr::fixed(to_set)))] <- 0
+    }
   }
 
   pred_out <- pred_grid
-  fit <- preds %*% coef(model)
-  se <- sqrt(rowSums((preds %*% vcov(model)) * preds))
+  fit <- preds %*% stats::coef(model)
+  se <- sqrt(rowSums((preds %*% stats::vcov(model)) * preds))
 
   if (!is.null(tran_fun)) {
     pred_out[[response]] <- tran_fun(fit)
