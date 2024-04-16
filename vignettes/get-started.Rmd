@@ -219,6 +219,9 @@ predict_gam(
   length_out = 50,
   series = "t",
   exclude_terms = "s(t,subject)",
+  # Pick any subject: since we are removing the random effect, it does not
+  # matter which one you pick, the predictions will be the same
+  values = c(subject = "03"),
   separate = list(stim_gram = c("stimulus", "grammar"))
 ) %>%
   plot(comparison = "grammar") +
