@@ -1,8 +1,12 @@
 # tidygam 0.2.0.9000
 
+## BREAKING
+
+* Now `predict_gam()` uses the `lpmatrix` predictions which means that when excluding terms the user will have to set a value for the excluded variable. This is especially relevant when excluding (random) factor smooths: the user should pick a value for the random variable in the smooth to avoid the same predictions being output for all levels in the random variable (see the `Get started` vignette for examples).
+
 ## Developer
 
-* Update renv.
+* Update renv and packages.
 
 
 
