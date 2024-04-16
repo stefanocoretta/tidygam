@@ -160,9 +160,7 @@ predict_gam <- function(model, length_out = 10, values = NULL,
   pred_grid <- tibble::as_tibble(expand.grid(pred_grid))
 
   if (is.null(exclude_terms)) {
-    preds <- mgcv::predict.gam(model, newdata = pred_grid, se.fit = TRUE)
-    fit <- preds$fit
-    se <- preds$se
+    preds <- mgcv::predict.gam(model, pred_grid, type = "lpmatrix")
   } else {
     preds_terms <- mgcv::predict.gam(model, newdata = pred_grid, se.fit = TRUE, type = "terms", exclude = exclude_terms, newdata.guaranteed = TRUE)
 
@@ -180,6 +178,8 @@ predict_gam <- function(model, length_out = 10, values = NULL,
   }
 
   pred_out <- pred_grid
+  fit <- preds %*% coef(model)
+  se <- sqrt(rowSums((preds %*% vcov(model)) * preds))
 
   if (!is.null(tran_fun)) {
     pred_out[[response]] <- tran_fun(fit)
@@ -187,7 +187,7 @@ predict_gam <- function(model, length_out = 10, values = NULL,
     pred_out$lower_ci <- tran_fun(fit - se * ci_z)
     pred_out$upper_ci <- tran_fun(fit + se * ci_z)
   } else {
-    pred_out[[response]] <- fit
+    pred_out[[response]] <- fit[,1]
     pred_out$se <- se
     pred_out$lower_ci <- fit - se * ci_z
     pred_out$upper_ci <- fit + se * ci_z
