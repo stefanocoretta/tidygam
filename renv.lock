@@ -1,6 +1,10 @@
 {
   "R": {
+<<<<<<< Updated upstream
     "Version": "4.3.0",
+=======
+    "Version": "4.3.3",
+>>>>>>> Stashed changes
     "Repositories": [
       {
         "Name": "BioCsoft",
@@ -29,11 +33,16 @@
     ]
   },
   "Bioconductor": {
+<<<<<<< Updated upstream
     "Version": "3.17"
+=======
+    "Version": "3.18"
+>>>>>>> Stashed changes
   },
   "Packages": {
     "BiocManager": {
       "Package": "BiocManager",
+<<<<<<< Updated upstream
       "Version": "1.30.21",
       "Source": "Repository",
       "Repository": "CRAN",
@@ -83,52 +92,123 @@
         "utils"
       ],
       "Hash": "38082d362d317745fb932e13956dccbb"
+=======
+      "Version": "1.30.22",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "d57e43105a1aa9cb54fdb4629725acb1",
+      "Requirements": []
+    },
+    "DBI": {
+      "Package": "DBI",
+      "Version": "1.2.2",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "164809cd72e1d5160b4cb3aa57f510fe",
+      "Requirements": []
+    },
+    "MASS": {
+      "Package": "MASS",
+      "Version": "7.3-60.0.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "b765b28387acc8ec9e9c1530713cb19c",
+      "Requirements": []
+    },
+    "Matrix": {
+      "Package": "Matrix",
+      "Version": "1.6-5",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "8c7115cd3a0e048bda2a7cd110549f7a",
+      "Requirements": [
+        "lattice"
+      ]
+>>>>>>> Stashed changes
     },
     "R6": {
       "Package": "R6",
       "Version": "2.5.1",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
       "Hash": "470851b6d5d0ac559e9d01bb352b4021"
+=======
+      "Repository": "RSPM",
+      "Hash": "470851b6d5d0ac559e9d01bb352b4021",
+      "Requirements": []
+>>>>>>> Stashed changes
     },
     "RColorBrewer": {
       "Package": "RColorBrewer",
       "Version": "1.1-3",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
       "Hash": "45f0398006e83a5b10b72a90663d8d8c"
+=======
+      "Repository": "RSPM",
+      "Hash": "45f0398006e83a5b10b72a90663d8d8c",
+      "Requirements": []
+    },
+    "Rcpp": {
+      "Package": "Rcpp",
+      "Version": "1.0.12",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "5ea2700d21e038ace58269ecdbeb9ec0",
+      "Requirements": []
+>>>>>>> Stashed changes
     },
     "askpass": {
       "Package": "askpass",
-      "Version": "1.1",
+      "Version": "1.2.0",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
       "Requirements": [
         "sys"
       ],
       "Hash": "e8a22846fff485f0be3770c2da758713"
+=======
+      "Repository": "RSPM",
+      "Hash": "cad6cf7f1d5f6e906700b9d3e718c796",
+      "Requirements": [
+        "sys"
+      ]
+>>>>>>> Stashed changes
     },
     "backports": {
       "Package": "backports",
       "Version": "1.4.1",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
       "Hash": "c39fbec8a30d23e721980b8afb31984c"
+=======
+      "Repository": "RSPM",
+      "Hash": "c39fbec8a30d23e721980b8afb31984c",
+      "Requirements": []
+>>>>>>> Stashed changes
     },
     "badger": {
       "Package": "badger",
       "Version": "0.2.3",
       "Source": "Repository",
       "Repository": "CRAN",
+<<<<<<< Updated upstream
+=======
+      "Hash": "90b2d3076e8a07bcc47c9586dc344e8c",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "desc",
@@ -142,27 +222,44 @@
       "Package": "base64enc",
       "Version": "0.1-3",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
       "Hash": "543776ae6848fde2f48ff3816d0628bc"
+=======
+      "Repository": "RSPM",
+      "Hash": "543776ae6848fde2f48ff3816d0628bc",
+      "Requirements": []
+>>>>>>> Stashed changes
     },
     "bit": {
       "Package": "bit",
       "Version": "4.0.5",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
       "Hash": "d242abec29412ce988848d0294b208fd"
+=======
+      "Repository": "RSPM",
+      "Hash": "d242abec29412ce988848d0294b208fd",
+      "Requirements": []
+>>>>>>> Stashed changes
     },
     "bit64": {
       "Package": "bit64",
       "Version": "4.0.5",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
+=======
+      "Repository": "RSPM",
+      "Hash": "9fe98599ca456d6552421db0d6772d8f",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "bit",
@@ -176,19 +273,37 @@
       "Package": "blob",
       "Version": "1.2.4",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
+=======
+      "Repository": "RSPM",
+      "Hash": "40415719b5a479b87949f3aa0aee737c",
+>>>>>>> Stashed changes
       "Requirements": [
         "methods",
         "rlang",
         "vctrs"
+<<<<<<< Updated upstream
       ],
       "Hash": "40415719b5a479b87949f3aa0aee737c"
+=======
+      ]
+    },
+    "brew": {
+      "Package": "brew",
+      "Version": "1.0-10",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "8f4a384e19dccd8c65356dc096847b76",
+      "Requirements": []
+>>>>>>> Stashed changes
     },
     "brio": {
       "Package": "brio",
-      "Version": "1.1.3",
+      "Version": "1.1.4",
       "Source": "Repository",
       "Repository": "CRAN",
+<<<<<<< Updated upstream
       "Hash": "976cf154dfb043c012d87cddd8bca363"
     },
     "broom": {
@@ -196,6 +311,17 @@
       "Version": "1.0.4",
       "Source": "Repository",
       "Repository": "CRAN",
+=======
+      "Hash": "68bd2b066e1fe780bbf62fc8bcc36de3",
+      "Requirements": []
+    },
+    "broom": {
+      "Package": "broom",
+      "Version": "1.0.5",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "fd25391c3c4f6ecf0fa95f1e6d15378c",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "backports",
@@ -214,6 +340,7 @@
     },
     "bslib": {
       "Package": "bslib",
+<<<<<<< Updated upstream
       "Version": "0.5.0",
       "Source": "Repository",
       "Repository": "CRAN",
@@ -225,6 +352,19 @@
         "htmltools",
         "jquerylib",
         "jsonlite",
+=======
+      "Version": "0.6.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "c0d8599494bc7fb408cd206bbdd9cab0",
+      "Requirements": [
+        "base64enc",
+        "cachem",
+        "htmltools",
+        "jquerylib",
+        "jsonlite",
+        "lifecycle",
+>>>>>>> Stashed changes
         "memoise",
         "mime",
         "rlang",
@@ -236,7 +376,12 @@
       "Package": "cachem",
       "Version": "1.0.8",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
+=======
+      "Repository": "RSPM",
+      "Hash": "c35768291560ce302c0a6589f92e837d",
+>>>>>>> Stashed changes
       "Requirements": [
         "fastmap",
         "rlang"
@@ -247,7 +392,12 @@
       "Package": "callr",
       "Version": "3.7.3",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
+=======
+      "Repository": "RSPM",
+      "Hash": "9b2191ede20fa29828139b9900922e51",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "R6",
@@ -260,11 +410,17 @@
       "Package": "cellranger",
       "Version": "1.1.0",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
+=======
+      "Repository": "RSPM",
+      "Hash": "f61dbaec772ccd2e17705c1e872e9e7c",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "rematch",
         "tibble"
+<<<<<<< Updated upstream
       ],
       "Hash": "f61dbaec772ccd2e17705c1e872e9e7c"
     },
@@ -278,21 +434,39 @@
         "utils"
       ],
       "Hash": "89e6d8219950eac806ae0c489052048a"
+=======
+      ]
+    },
+    "cli": {
+      "Package": "cli",
+      "Version": "3.6.2",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "1216ac65ac55ec0058a6f75d7ca0fd52",
+      "Requirements": []
+>>>>>>> Stashed changes
     },
     "clipr": {
       "Package": "clipr",
       "Version": "0.8.0",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
       "Requirements": [
         "utils"
       ],
       "Hash": "3f038e5ac7f41d4ac41ce658c85e3042"
+=======
+      "Repository": "RSPM",
+      "Hash": "3f038e5ac7f41d4ac41ce658c85e3042",
+      "Requirements": []
+>>>>>>> Stashed changes
     },
     "colorspace": {
       "Package": "colorspace",
       "Version": "2.1-0",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
       "Requirements": [
         "R",
@@ -322,11 +496,45 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "ed588261931ee3be2c700d22e94a29ab"
+=======
+      "Repository": "RSPM",
+      "Hash": "f20c47fd52fae58b4e377c37bb8c335b",
+      "Requirements": []
+    },
+    "commonmark": {
+      "Package": "commonmark",
+      "Version": "1.9.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "5d8225445acb167abf7797de48b2ee3c",
+      "Requirements": []
+    },
+    "conflicted": {
+      "Package": "conflicted",
+      "Version": "1.2.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "bb097fccb22d156624fd07cd2894ddb6",
+      "Requirements": [
+        "cli",
+        "memoise",
+        "rlang"
+      ]
+    },
+    "cpp11": {
+      "Package": "cpp11",
+      "Version": "0.4.7",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "5a295d7d963cc5035284dcdbaf334f4e",
+      "Requirements": []
+>>>>>>> Stashed changes
     },
     "crayon": {
       "Package": "crayon",
       "Version": "1.5.2",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
       "Requirements": [
         "grDevices",
@@ -334,12 +542,22 @@
         "utils"
       ],
       "Hash": "e8a1e41acf02548751f45c718d55aa6a"
+=======
+      "Repository": "RSPM",
+      "Hash": "e8a1e41acf02548751f45c718d55aa6a",
+      "Requirements": []
+>>>>>>> Stashed changes
     },
     "credentials": {
       "Package": "credentials",
-      "Version": "1.3.2",
+      "Version": "2.0.1",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
+=======
+      "Repository": "RSPM",
+      "Hash": "c7844b32098dcbd1c59cbd8dddb4ecc6",
+>>>>>>> Stashed changes
       "Requirements": [
         "askpass",
         "curl",
@@ -351,6 +569,7 @@
     },
     "curl": {
       "Package": "curl",
+<<<<<<< Updated upstream
       "Version": "5.0.1",
       "Source": "Repository",
       "Repository": "CRAN",
@@ -375,6 +594,28 @@
       "Version": "2.3.2",
       "Source": "Repository",
       "Repository": "CRAN",
+=======
+      "Version": "5.2.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "411ca2c03b1ce5f548345d2fc2685f7a",
+      "Requirements": []
+    },
+    "data.table": {
+      "Package": "data.table",
+      "Version": "1.15.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "cfbbb4aed6e78cd45f17123a9ec9981a",
+      "Requirements": []
+    },
+    "dbplyr": {
+      "Package": "dbplyr",
+      "Version": "2.4.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "59351f28a81f0742720b85363c4fdd61",
+>>>>>>> Stashed changes
       "Requirements": [
         "DBI",
         "R",
@@ -385,7 +626,10 @@
         "glue",
         "lifecycle",
         "magrittr",
+<<<<<<< Updated upstream
         "methods",
+=======
+>>>>>>> Stashed changes
         "pillar",
         "purrr",
         "rlang",
@@ -400,12 +644,20 @@
     },
     "desc": {
       "Package": "desc",
+<<<<<<< Updated upstream
       "Version": "1.4.2",
       "Source": "Repository",
       "Repository": "CRAN",
+=======
+      "Version": "1.4.3",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "99b79fcbd6c4d1ce087f5c5c758b384f",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "R6",
+<<<<<<< Updated upstream
         "cli",
         "rprojroot",
         "utils"
@@ -422,12 +674,68 @@
         "utils"
       ],
       "Hash": "8b708f296afd9ae69f450f9640be8990"
+=======
+        "cli"
+      ]
+    },
+    "devtools": {
+      "Package": "devtools",
+      "Version": "2.4.5",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "ea5bc8b4a6a01e4f12d98b58329930bb",
+      "Requirements": [
+        "cli",
+        "desc",
+        "ellipsis",
+        "fs",
+        "lifecycle",
+        "memoise",
+        "miniUI",
+        "pkgbuild",
+        "pkgdown",
+        "pkgload",
+        "profvis",
+        "rcmdcheck",
+        "remotes",
+        "rlang",
+        "roxygen2",
+        "rversions",
+        "sessioninfo",
+        "testthat",
+        "urlchecker",
+        "usethis",
+        "withr"
+      ]
+    },
+    "diffobj": {
+      "Package": "diffobj",
+      "Version": "0.3.5",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "bcaa8b95f8d7d01a5dedfd959ce88ab8",
+      "Requirements": [
+        "crayon"
+      ]
+    },
+    "digest": {
+      "Package": "digest",
+      "Version": "0.6.35",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "698ece7ba5a4fa4559e3d537e7ec3d31",
+      "Requirements": []
+>>>>>>> Stashed changes
     },
     "dlstats": {
       "Package": "dlstats",
       "Version": "0.1.7",
       "Source": "Repository",
       "Repository": "CRAN",
+<<<<<<< Updated upstream
+=======
+      "Hash": "e9ba1c73457c25b19b94bd71eceb38ab",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "RColorBrewer",
@@ -441,9 +749,16 @@
     },
     "downlit": {
       "Package": "downlit",
+<<<<<<< Updated upstream
       "Version": "0.4.2",
       "Source": "Repository",
       "Repository": "CRAN",
+=======
+      "Version": "0.4.3",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "14fa1f248b60ed67e1f5418391a17b14",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "brio",
@@ -461,9 +776,16 @@
     },
     "dplyr": {
       "Package": "dplyr",
+<<<<<<< Updated upstream
       "Version": "1.1.2",
       "Source": "Repository",
       "Repository": "CRAN",
+=======
+      "Version": "1.1.4",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "fedd9d00c2944ff00a0e2696ccf048ec",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "R6",
@@ -486,9 +808,15 @@
       "Package": "dtplyr",
       "Version": "1.3.1",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
       "Requirements": [
         "R",
+=======
+      "Repository": "RSPM",
+      "Hash": "54ed3ea01b11e81a86544faaecfef8e2",
+      "Requirements": [
+>>>>>>> Stashed changes
         "cli",
         "data.table",
         "dplyr",
@@ -505,7 +833,12 @@
       "Package": "ellipsis",
       "Version": "0.3.2",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
+=======
+      "Repository": "RSPM",
+      "Hash": "bb0eec2fe32e88d9e2836c2f73ea2077",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "rlang"
@@ -514,6 +847,7 @@
     },
     "evaluate": {
       "Package": "evaluate",
+<<<<<<< Updated upstream
       "Version": "0.21",
       "Source": "Repository",
       "Repository": "CRAN",
@@ -534,18 +868,40 @@
         "utils"
       ],
       "Hash": "1d9e7ad3c8312a192dea7d3db0274fde"
+=======
+      "Version": "0.23",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "daf4a1246be12c1fa8c7705a0935c1a0",
+      "Requirements": []
+    },
+    "fansi": {
+      "Package": "fansi",
+      "Version": "1.0.6",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "962174cf2aeb5b9eea581522286a911f",
+      "Requirements": []
+>>>>>>> Stashed changes
     },
     "farver": {
       "Package": "farver",
       "Version": "2.1.1",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
       "Hash": "8106d78941f34855c440ddb946b8f7a5"
+=======
+      "Repository": "RSPM",
+      "Hash": "8106d78941f34855c440ddb946b8f7a5",
+      "Requirements": []
+>>>>>>> Stashed changes
     },
     "fastmap": {
       "Package": "fastmap",
       "Version": "1.1.1",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
       "Hash": "f7736a18de97dea803bde0a2daaafb27"
     },
@@ -568,12 +924,37 @@
       "Repository": "CRAN",
       "Requirements": [
         "R",
+=======
+      "Repository": "RSPM",
+      "Hash": "f7736a18de97dea803bde0a2daaafb27",
+      "Requirements": []
+    },
+    "fontawesome": {
+      "Package": "fontawesome",
+      "Version": "0.5.2",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "c2efdd5f0bcd1ea861c2d4e2a883a67d",
+      "Requirements": [
+        "htmltools",
+        "rlang"
+      ]
+    },
+    "forcats": {
+      "Package": "forcats",
+      "Version": "1.0.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "1a0a9a3d5083d0d573c4214576f1e690",
+      "Requirements": [
+>>>>>>> Stashed changes
         "cli",
         "glue",
         "lifecycle",
         "magrittr",
         "rlang",
         "tibble"
+<<<<<<< Updated upstream
       ],
       "Hash": "1a0a9a3d5083d0d573c4214576f1e690"
     },
@@ -593,6 +974,24 @@
       "Version": "1.4.0",
       "Source": "Repository",
       "Repository": "CRAN",
+=======
+      ]
+    },
+    "fs": {
+      "Package": "fs",
+      "Version": "1.6.3",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "47b5f30c720c23999b913a1a635cf0bb",
+      "Requirements": []
+    },
+    "gargle": {
+      "Package": "gargle",
+      "Version": "1.5.2",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "fc0b272e5847c58cd5da9b20eedbd026",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "cli",
@@ -604,8 +1003,11 @@
         "openssl",
         "rappdirs",
         "rlang",
+<<<<<<< Updated upstream
         "stats",
         "utils",
+=======
+>>>>>>> Stashed changes
         "withr"
       ],
       "Hash": "8c72a723822dc317613da5ff8e8da6ee"
@@ -614,6 +1016,7 @@
       "Package": "generics",
       "Version": "0.1.3",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
       "Requirements": [
         "R",
@@ -626,6 +1029,18 @@
       "Version": "1.9.2",
       "Source": "Repository",
       "Repository": "CRAN",
+=======
+      "Repository": "RSPM",
+      "Hash": "15e9634c0fcd294799e9b2e929ed1b86",
+      "Requirements": []
+    },
+    "gert": {
+      "Package": "gert",
+      "Version": "2.0.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "f70d3fe2d9e7654213a946963d1591eb",
+>>>>>>> Stashed changes
       "Requirements": [
         "askpass",
         "credentials",
@@ -638,12 +1053,21 @@
     },
     "ggplot2": {
       "Package": "ggplot2",
+<<<<<<< Updated upstream
       "Version": "3.4.2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "MASS",
         "R",
+=======
+      "Version": "3.5.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "52ef83f93f74833007f193b2d4c159a2",
+      "Requirements": [
+        "MASS",
+>>>>>>> Stashed changes
         "cli",
         "glue",
         "grDevices",
@@ -663,34 +1087,58 @@
     },
     "gh": {
       "Package": "gh",
+<<<<<<< Updated upstream
       "Version": "1.4.0",
       "Source": "Repository",
       "Repository": "CRAN",
+=======
+      "Version": "1.4.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "fbbbc48eba7a6626a08bb365e44b563b",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "cli",
         "gitcreds",
+<<<<<<< Updated upstream
         "httr2",
         "ini",
         "jsonlite",
         "rlang"
       ],
       "Hash": "03533b1c875028233598f848fda44c4c"
+=======
+        "glue",
+        "httr2",
+        "ini",
+        "jsonlite",
+        "lifecycle",
+        "rlang"
+      ]
+>>>>>>> Stashed changes
     },
     "gitcreds": {
       "Package": "gitcreds",
       "Version": "0.1.2",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
       "Hash": "ab08ac61f3e1be454ae21911eb8bc2fe"
+=======
+      "Repository": "RSPM",
+      "Hash": "ab08ac61f3e1be454ae21911eb8bc2fe",
+      "Requirements": []
+>>>>>>> Stashed changes
     },
     "glue": {
       "Package": "glue",
-      "Version": "1.6.2",
+      "Version": "1.7.0",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
       "Requirements": [
         "R",
@@ -703,6 +1151,18 @@
       "Version": "2.1.0",
       "Source": "Repository",
       "Repository": "CRAN",
+=======
+      "Repository": "RSPM",
+      "Hash": "e0b3a53876554bd45879e596cdb10a52",
+      "Requirements": []
+    },
+    "googledrive": {
+      "Package": "googledrive",
+      "Version": "2.1.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "e99641edef03e2a5e87f0a0b1fcc97f4",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "cli",
@@ -725,9 +1185,16 @@
     },
     "googlesheets4": {
       "Package": "googlesheets4",
+<<<<<<< Updated upstream
       "Version": "1.1.0",
       "Source": "Repository",
       "Repository": "CRAN",
+=======
+      "Version": "1.1.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "d6db1667059d027da730decdc214b959",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "cellranger",
@@ -745,6 +1212,7 @@
         "rematch2",
         "rlang",
         "tibble",
+<<<<<<< Updated upstream
         "utils",
         "vctrs",
         "withr"
@@ -771,6 +1239,31 @@
       "Version": "2.5.2",
       "Source": "Repository",
       "Repository": "CRAN",
+=======
+        "vctrs",
+        "withr"
+      ]
+    },
+    "gtable": {
+      "Package": "gtable",
+      "Version": "0.3.4",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "b29cf3031f49b04ab9c852c912547eef",
+      "Requirements": [
+        "cli",
+        "glue",
+        "lifecycle",
+        "rlang"
+      ]
+    },
+    "haven": {
+      "Package": "haven",
+      "Version": "2.5.4",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "9171f898db9d9c4c1b2c745adc2c1ef1",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "cli",
@@ -801,7 +1294,12 @@
       "Package": "highr",
       "Version": "0.10",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
+=======
+      "Repository": "RSPM",
+      "Hash": "06230136b2d2b9ba5805e1963fa6e890",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "xfun"
@@ -812,7 +1310,12 @@
       "Package": "hms",
       "Version": "1.1.3",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
+=======
+      "Repository": "RSPM",
+      "Hash": "b59377caa7ed00fa41808342002138f9",
+>>>>>>> Stashed changes
       "Requirements": [
         "lifecycle",
         "methods",
@@ -824,9 +1327,16 @@
     },
     "htmltools": {
       "Package": "htmltools",
+<<<<<<< Updated upstream
       "Version": "0.5.5",
       "Source": "Repository",
       "Repository": "CRAN",
+=======
+      "Version": "0.5.7",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "2d7b3857980e0e0d0a1fd6f11928ab0f",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "base64enc",
@@ -839,11 +1349,45 @@
       ],
       "Hash": "ba0240784ad50a62165058a27459304a"
     },
+    "htmlwidgets": {
+      "Package": "htmlwidgets",
+      "Version": "1.6.4",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "04291cc45198225444a397606810ac37",
+      "Requirements": [
+        "htmltools",
+        "jsonlite",
+        "knitr",
+        "rmarkdown",
+        "yaml"
+      ]
+    },
+    "httpuv": {
+      "Package": "httpuv",
+      "Version": "1.6.14",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "16abeb167dbf511f8cc0552efaf05bab",
+      "Requirements": [
+        "R6",
+        "Rcpp",
+        "later",
+        "promises"
+      ]
+    },
     "httr": {
       "Package": "httr",
+<<<<<<< Updated upstream
       "Version": "1.4.6",
       "Source": "Repository",
       "Repository": "CRAN",
+=======
+      "Version": "1.4.7",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "ac107251d9d9fd72f0ca8049988f1d7f",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "R6",
@@ -856,28 +1400,51 @@
     },
     "httr2": {
       "Package": "httr2",
+<<<<<<< Updated upstream
       "Version": "0.2.3",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
+=======
+      "Version": "1.0.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "03d741c92fda96d98c3a3f22494e3b4a",
+      "Requirements": [
+>>>>>>> Stashed changes
         "R6",
         "cli",
         "curl",
         "glue",
+<<<<<<< Updated upstream
+=======
+        "lifecycle",
+>>>>>>> Stashed changes
         "magrittr",
         "openssl",
         "rappdirs",
         "rlang",
+<<<<<<< Updated upstream
         "withr"
       ],
       "Hash": "193bb297368afbbb42dc85784a46b36e"
+=======
+        "vctrs",
+        "withr"
+      ]
+>>>>>>> Stashed changes
     },
     "ids": {
       "Package": "ids",
       "Version": "1.0.1",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
+=======
+      "Repository": "RSPM",
+      "Hash": "99df65cfef20e525ed38c3d2577f7190",
+>>>>>>> Stashed changes
       "Requirements": [
         "openssl",
         "uuid"
@@ -893,6 +1460,7 @@
     },
     "insight": {
       "Package": "insight",
+<<<<<<< Updated upstream
       "Version": "0.19.1",
       "Source": "Repository",
       "Repository": "CRAN",
@@ -903,23 +1471,41 @@
         "utils"
       ],
       "Hash": "b7a721ab3228268ed3a4ac3d585a09bf"
+=======
+      "Version": "0.19.8",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "adcc19435135a4d211e5aa2e48e4f6b7",
+      "Requirements": []
+>>>>>>> Stashed changes
     },
     "isoband": {
       "Package": "isoband",
       "Version": "0.2.7",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
       "Requirements": [
         "grid",
         "utils"
       ],
       "Hash": "0080607b4a1a7b28979aecef976d8bc2"
+=======
+      "Repository": "RSPM",
+      "Hash": "0080607b4a1a7b28979aecef976d8bc2",
+      "Requirements": []
+>>>>>>> Stashed changes
     },
     "jquerylib": {
       "Package": "jquerylib",
       "Version": "0.1.4",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
+=======
+      "Repository": "RSPM",
+      "Hash": "5aab57a3bd297eee1c1d862735972182",
+>>>>>>> Stashed changes
       "Requirements": [
         "htmltools"
       ],
@@ -927,6 +1513,7 @@
     },
     "jsonlite": {
       "Package": "jsonlite",
+<<<<<<< Updated upstream
       "Version": "1.8.5",
       "Source": "Repository",
       "Repository": "CRAN",
@@ -940,12 +1527,29 @@
       "Version": "1.43",
       "Source": "Repository",
       "Repository": "CRAN",
+=======
+      "Version": "1.8.8",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "e1b9c55281c5adc4dd113652d9e26768",
+      "Requirements": []
+    },
+    "knitr": {
+      "Package": "knitr",
+      "Version": "1.45",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "1ec462871063897135c1bcbe0fc8f07d",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "evaluate",
         "highr",
+<<<<<<< Updated upstream
         "methods",
         "tools",
+=======
+>>>>>>> Stashed changes
         "xfun",
         "yaml"
       ],
@@ -953,8 +1557,9 @@
     },
     "labeling": {
       "Package": "labeling",
-      "Version": "0.4.2",
+      "Version": "0.4.3",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
       "Requirements": [
         "graphics",
@@ -1002,22 +1607,87 @@
         "timechange"
       ],
       "Hash": "e25f18436e3efd42c7c590a1c4c15390"
+=======
+      "Repository": "RSPM",
+      "Hash": "b64ec208ac5bc1852b285f665d6368b3",
+      "Requirements": []
+    },
+    "later": {
+      "Package": "later",
+      "Version": "1.3.2",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "a3e051d405326b8b0012377434c62b37",
+      "Requirements": [
+        "Rcpp",
+        "rlang"
+      ]
+    },
+    "lattice": {
+      "Package": "lattice",
+      "Version": "0.22-6",
+      "Source": "CRAN",
+      "Repository": "CRAN",
+      "RemoteType": "standard",
+      "RemotePkgRef": "lattice",
+      "RemoteRef": "lattice",
+      "RemoteRepos": "https://www.stats.bris.ac.uk/R",
+      "RemoteReposName": "CRAN",
+      "RemotePkgPlatform": "source",
+      "RemoteSha": "0.22-6",
+      "Hash": "cc5ac1ba4c238c7ca9fa6a87ca11a7e2",
+      "Requirements": []
+    },
+    "lifecycle": {
+      "Package": "lifecycle",
+      "Version": "1.0.4",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "b8552d117e1b808b09a832f589b79035",
+      "Requirements": [
+        "cli",
+        "glue",
+        "rlang"
+      ]
+    },
+    "lubridate": {
+      "Package": "lubridate",
+      "Version": "1.9.3",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "680ad542fbcf801442c83a6ac5a2126c",
+      "Requirements": [
+        "generics",
+        "timechange"
+      ]
+>>>>>>> Stashed changes
     },
     "magrittr": {
       "Package": "magrittr",
       "Version": "2.0.3",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
       "Hash": "7ce2733a9826b3aeb1775d56fd305472"
+=======
+      "Repository": "RSPM",
+      "Hash": "7ce2733a9826b3aeb1775d56fd305472",
+      "Requirements": []
+>>>>>>> Stashed changes
     },
     "memoise": {
       "Package": "memoise",
       "Version": "2.0.1",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
+=======
+      "Repository": "RSPM",
+      "Hash": "e2817ccf4a065c5d9d7f2cfbe7c1d78c",
+>>>>>>> Stashed changes
       "Requirements": [
         "cachem",
         "rlang"
@@ -1026,9 +1696,16 @@
     },
     "mgcv": {
       "Package": "mgcv",
+<<<<<<< Updated upstream
       "Version": "1.8-42",
       "Source": "Repository",
       "Repository": "CRAN",
+=======
+      "Version": "1.9-1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "110ee9d83b496279960e162ac97764ce",
+>>>>>>> Stashed changes
       "Requirements": [
         "Matrix",
         "R",
@@ -1045,17 +1722,39 @@
       "Package": "mime",
       "Version": "0.12",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
       "Requirements": [
         "tools"
       ],
       "Hash": "18e9c28c1d3ca1560ce30658b22ce104"
+=======
+      "Repository": "RSPM",
+      "Hash": "18e9c28c1d3ca1560ce30658b22ce104",
+      "Requirements": []
+>>>>>>> Stashed changes
+    },
+    "miniUI": {
+      "Package": "miniUI",
+      "Version": "0.1.1.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "fec5f52652d60615fdb3957b3d74324a",
+      "Requirements": [
+        "htmltools",
+        "shiny"
+      ]
     },
     "modelr": {
       "Package": "modelr",
       "Version": "0.1.11",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
+=======
+      "Repository": "RSPM",
+      "Hash": "4f50122dc256b1b6996a4703fecea821",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "broom",
@@ -1071,9 +1770,20 @@
     },
     "munsell": {
       "Package": "munsell",
-      "Version": "0.5.0",
-      "Source": "Repository",
+      "Version": "0.5.1",
+      "Source": "CRAN",
       "Repository": "CRAN",
+<<<<<<< Updated upstream
+=======
+      "RemoteType": "standard",
+      "RemotePkgRef": "munsell",
+      "RemoteRef": "munsell",
+      "RemoteRepos": "https://cloud.r-project.org",
+      "RemoteReposName": "CRAN",
+      "RemotePkgPlatform": "source",
+      "RemoteSha": "0.5.1",
+      "Hash": "4fd8900853b746af55b81fda99da7695",
+>>>>>>> Stashed changes
       "Requirements": [
         "colorspace",
         "methods"
@@ -1082,6 +1792,7 @@
     },
     "nlme": {
       "Package": "nlme",
+<<<<<<< Updated upstream
       "Version": "3.1-162",
       "Source": "Repository",
       "Repository": "CRAN",
@@ -1103,12 +1814,36 @@
         "askpass"
       ],
       "Hash": "0f7cd2962e3044bb940cca4f4b5cecbe"
+=======
+      "Version": "3.1-164",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "a623a2239e642806158bc4dc3f51565d",
+      "Requirements": [
+        "lattice"
+      ]
+    },
+    "openssl": {
+      "Package": "openssl",
+      "Version": "2.1.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "2a0dc8c6adfb6f032e4d4af82d258ab5",
+      "Requirements": [
+        "askpass"
+      ]
+>>>>>>> Stashed changes
     },
     "pillar": {
       "Package": "pillar",
       "Version": "1.9.0",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
+=======
+      "Repository": "RSPM",
+      "Hash": "15da5a8412f317beeee6175fbc76f4bb",
+>>>>>>> Stashed changes
       "Requirements": [
         "cli",
         "fansi",
@@ -1118,24 +1853,53 @@
         "utf8",
         "utils",
         "vctrs"
+<<<<<<< Updated upstream
       ],
       "Hash": "15da5a8412f317beeee6175fbc76f4bb"
+=======
+      ]
+    },
+    "pkgbuild": {
+      "Package": "pkgbuild",
+      "Version": "1.4.3",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "c0143443203205e6a2760ce553dafc24",
+      "Requirements": [
+        "R6",
+        "callr",
+        "cli",
+        "desc",
+        "processx"
+      ]
+>>>>>>> Stashed changes
     },
     "pkgconfig": {
       "Package": "pkgconfig",
       "Version": "2.0.3",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
       "Requirements": [
         "utils"
       ],
       "Hash": "01f28d4278f15c76cddbea05899c5d6f"
+=======
+      "Repository": "RSPM",
+      "Hash": "01f28d4278f15c76cddbea05899c5d6f",
+      "Requirements": []
+>>>>>>> Stashed changes
     },
     "pkgdown": {
       "Package": "pkgdown",
       "Version": "2.0.7",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
+=======
+      "Repository": "RSPM",
+      "Hash": "16fa15449c930bf3a7761d3c68f8abf9",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "bslib",
@@ -1158,13 +1922,44 @@
         "withr",
         "xml2",
         "yaml"
+<<<<<<< Updated upstream
       ],
       "Hash": "16fa15449c930bf3a7761d3c68f8abf9"
+=======
+      ]
+    },
+    "pkgload": {
+      "Package": "pkgload",
+      "Version": "1.3.4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "876c618df5ae610be84356d5d7a5d124",
+      "Requirements": [
+        "cli",
+        "crayon",
+        "desc",
+        "fs",
+        "glue",
+        "pkgbuild",
+        "rlang",
+        "rprojroot",
+        "withr"
+      ]
+    },
+    "praise": {
+      "Package": "praise",
+      "Version": "1.0.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "a555924add98c99d2f411e37e7d25e9f",
+      "Requirements": []
+>>>>>>> Stashed changes
     },
     "prettyunits": {
       "Package": "prettyunits",
-      "Version": "1.1.1",
+      "Version": "1.2.0",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
       "Hash": "95ef9167b75dde9d2ccc3c7528393e7e"
     },
@@ -1173,6 +1968,18 @@
       "Version": "3.8.1",
       "Source": "Repository",
       "Repository": "CRAN",
+=======
+      "Repository": "RSPM",
+      "Hash": "6b01fc98b1e86c4f705ce9dcfd2f57c7",
+      "Requirements": []
+    },
+    "processx": {
+      "Package": "processx",
+      "Version": "3.8.3",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "82d48b1aec56084d9438dbf98087a7e9",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "R6",
@@ -1181,11 +1988,30 @@
       ],
       "Hash": "d75b4059d781336efba24021915902b4"
     },
+    "profvis": {
+      "Package": "profvis",
+      "Version": "0.3.8",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "aa5a3864397ce6ae03458f98618395a1",
+      "Requirements": [
+        "htmlwidgets",
+        "purrr",
+        "rlang",
+        "stringr",
+        "vctrs"
+      ]
+    },
     "progress": {
       "Package": "progress",
-      "Version": "1.2.2",
+      "Version": "1.2.3",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
+=======
+      "Repository": "RSPM",
+      "Hash": "f4625e061cb2865f111b47ff163a5ca6",
+>>>>>>> Stashed changes
       "Requirements": [
         "R6",
         "crayon",
@@ -1194,6 +2020,7 @@
       ],
       "Hash": "14dc9f7a3c91ebb14ec5bb9208a07061"
     },
+<<<<<<< Updated upstream
     "ps": {
       "Package": "ps",
       "Version": "1.7.5",
@@ -1225,6 +2052,51 @@
       "Version": "1.2.5",
       "Source": "Repository",
       "Repository": "CRAN",
+=======
+    "promises": {
+      "Package": "promises",
+      "Version": "1.2.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "0d8a15c9d000970ada1ab21405387dee",
+      "Requirements": [
+        "R6",
+        "Rcpp",
+        "fastmap",
+        "later",
+        "magrittr",
+        "rlang"
+      ]
+    },
+    "ps": {
+      "Package": "ps",
+      "Version": "1.7.6",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "dd2b9319ee0656c8acf45c7f40c59de7",
+      "Requirements": []
+    },
+    "purrr": {
+      "Package": "purrr",
+      "Version": "1.0.2",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "1cba04a4e9414bdefc9dcaa99649a8dc",
+      "Requirements": [
+        "cli",
+        "lifecycle",
+        "magrittr",
+        "rlang",
+        "vctrs"
+      ]
+    },
+    "ragg": {
+      "Package": "ragg",
+      "Version": "1.2.7",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "90a1b8b7e518d7f90480d56453b4d062",
+>>>>>>> Stashed changes
       "Requirements": [
         "systemfonts",
         "textshaping"
@@ -1235,7 +2107,20 @@
       "Package": "rappdirs",
       "Version": "0.3.3",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
+=======
+      "Repository": "RSPM",
+      "Hash": "5e3c5dc0b071b21fa128676560dbe94d",
+      "Requirements": []
+    },
+    "rcmdcheck": {
+      "Package": "rcmdcheck",
+      "Version": "1.4.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "8f25ebe2ec38b1f2aef3b0d2ef76f6c4",
+>>>>>>> Stashed changes
       "Requirements": [
         "R"
       ],
@@ -1243,9 +2128,16 @@
     },
     "readr": {
       "Package": "readr",
+<<<<<<< Updated upstream
       "Version": "2.1.4",
       "Source": "Repository",
       "Repository": "CRAN",
+=======
+      "Version": "2.1.5",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "9de96463d2117f6ac49980577939dfb3",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "R6",
@@ -1266,9 +2158,16 @@
     },
     "readxl": {
       "Package": "readxl",
+<<<<<<< Updated upstream
       "Version": "1.4.2",
       "Source": "Repository",
       "Repository": "CRAN",
+=======
+      "Version": "1.4.3",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "8cf9c239b96df1bbb133b74aef77ad0a",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "cellranger",
@@ -1281,20 +2180,42 @@
     },
     "rematch": {
       "Package": "rematch",
-      "Version": "1.0.1",
+      "Version": "2.0.0",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
       "Hash": "c66b930d20bb6d858cd18e1cebcfae5c"
+=======
+      "Repository": "RSPM",
+      "Hash": "cbff1b666c6fa6d21202f07e2318d4f1",
+      "Requirements": []
+>>>>>>> Stashed changes
     },
     "rematch2": {
       "Package": "rematch2",
       "Version": "2.1.2",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
       "Requirements": [
         "tibble"
       ],
       "Hash": "76c9e04c712a05848ae7a23d2f170a40"
+=======
+      "Repository": "RSPM",
+      "Hash": "76c9e04c712a05848ae7a23d2f170a40",
+      "Requirements": [
+        "tibble"
+      ]
+    },
+    "remotes": {
+      "Package": "remotes",
+      "Version": "2.4.2.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "63d15047eb239f95160112bcadc4fcb9",
+      "Requirements": []
+>>>>>>> Stashed changes
     },
     "renv": {
       "Package": "renv",
@@ -1308,9 +2229,16 @@
     },
     "reprex": {
       "Package": "reprex",
+<<<<<<< Updated upstream
       "Version": "2.0.2",
       "Source": "Repository",
       "Repository": "CRAN",
+=======
+      "Version": "2.1.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "1425f91b4d5d9a8f25352c44a3d914ed",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "callr",
@@ -1325,6 +2253,7 @@
         "rstudioapi",
         "utils",
         "withr"
+<<<<<<< Updated upstream
       ],
       "Hash": "d66fe009d4c20b7ab1927eb405db9ee2"
     },
@@ -1344,6 +2273,24 @@
       "Version": "2.22",
       "Source": "Repository",
       "Repository": "CRAN",
+=======
+      ]
+    },
+    "rlang": {
+      "Package": "rlang",
+      "Version": "1.1.3",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "42548638fae05fd9a9b5f3f437fbbbe2",
+      "Requirements": []
+    },
+    "rmarkdown": {
+      "Package": "rmarkdown",
+      "Version": "2.25",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "d65e35823c817f09f4de424fcdfa812a",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "bslib",
@@ -1360,14 +2307,42 @@
         "utils",
         "xfun",
         "yaml"
+<<<<<<< Updated upstream
       ],
       "Hash": "75a01be060d800ceb14e32c666cacac9"
+=======
+      ]
+    },
+    "roxygen2": {
+      "Package": "roxygen2",
+      "Version": "7.3.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "c25fe7b2d8cba73d1b63c947bf7afdb9",
+      "Requirements": [
+        "R6",
+        "brew",
+        "cli",
+        "commonmark",
+        "cpp11",
+        "desc",
+        "knitr",
+        "pkgload",
+        "purrr",
+        "rlang",
+        "stringi",
+        "stringr",
+        "withr",
+        "xml2"
+      ]
+>>>>>>> Stashed changes
     },
     "rprojroot": {
       "Package": "rprojroot",
-      "Version": "2.0.3",
+      "Version": "2.0.4",
       "Source": "Repository",
       "Repository": "CRAN",
+<<<<<<< Updated upstream
       "Requirements": [
         "R"
       ],
@@ -1379,6 +2354,18 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "690bd2acc42a9166ce34845884459320"
+=======
+      "Hash": "4c8415e0ec1e29f3f4f6fc108bef0144",
+      "Requirements": []
+    },
+    "rstudioapi": {
+      "Package": "rstudioapi",
+      "Version": "0.16.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "96710351d642b70e8f02ddeb237c46a7",
+      "Requirements": []
+>>>>>>> Stashed changes
     },
     "rvcheck": {
       "Package": "rvcheck",
@@ -1390,6 +2377,7 @@
         "R",
         "utils",
         "yulab.utils"
+<<<<<<< Updated upstream
       ],
       "Hash": "fee46a3924e5522b01138accbe6ff804"
     },
@@ -1400,6 +2388,28 @@
       "Repository": "CRAN",
       "Requirements": [
         "R",
+=======
+      ]
+    },
+    "rversions": {
+      "Package": "rversions",
+      "Version": "2.1.2",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "a9881dfed103e83f9de151dc17002cd1",
+      "Requirements": [
+        "curl",
+        "xml2"
+      ]
+    },
+    "rvest": {
+      "Package": "rvest",
+      "Version": "1.0.4",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "0bcf0c6f274e90ea314b812a6d19a519",
+      "Requirements": [
+>>>>>>> Stashed changes
         "cli",
         "glue",
         "httr",
@@ -1415,9 +2425,16 @@
     },
     "sass": {
       "Package": "sass",
+<<<<<<< Updated upstream
       "Version": "0.4.6",
       "Source": "Repository",
       "Repository": "CRAN",
+=======
+      "Version": "0.4.8",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "168f9353c76d4c4b0a0bbf72e2c2d035",
+>>>>>>> Stashed changes
       "Requirements": [
         "R6",
         "fs",
@@ -1429,14 +2446,23 @@
     },
     "scales": {
       "Package": "scales",
+<<<<<<< Updated upstream
       "Version": "1.2.1",
       "Source": "Repository",
       "Repository": "CRAN",
+=======
+      "Version": "1.3.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "c19df082ba346b0ffa6f833e92de34d1",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "R6",
         "RColorBrewer",
+        "cli",
         "farver",
+        "glue",
         "labeling",
         "lifecycle",
         "munsell",
@@ -1449,17 +2475,74 @@
       "Package": "selectr",
       "Version": "0.4-2",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
+=======
+      "Repository": "RSPM",
+      "Hash": "3838071b66e0c566d55cc26bd6e27bf4",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "R6",
         "methods",
         "stringr"
+<<<<<<< Updated upstream
       ],
       "Hash": "3838071b66e0c566d55cc26bd6e27bf4"
+=======
+      ]
+    },
+    "sessioninfo": {
+      "Package": "sessioninfo",
+      "Version": "1.2.2",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "3f9796a8d0a0e8c6eb49a4b029359d1f",
+      "Requirements": [
+        "cli"
+      ]
+    },
+    "shiny": {
+      "Package": "shiny",
+      "Version": "1.8.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "3a1f41807d648a908e3c7f0334bf85e6",
+      "Requirements": [
+        "R6",
+        "bslib",
+        "cachem",
+        "commonmark",
+        "crayon",
+        "ellipsis",
+        "fastmap",
+        "fontawesome",
+        "glue",
+        "htmltools",
+        "httpuv",
+        "jsonlite",
+        "later",
+        "lifecycle",
+        "mime",
+        "promises",
+        "rlang",
+        "sourcetools",
+        "withr",
+        "xtable"
+      ]
+>>>>>>> Stashed changes
+    },
+    "sourcetools": {
+      "Package": "sourcetools",
+      "Version": "0.1.7-1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "5f5a7629f956619d519205ec475fe647",
+      "Requirements": []
     },
     "stringi": {
       "Package": "stringi",
+<<<<<<< Updated upstream
       "Version": "1.7.12",
       "Source": "Repository",
       "Repository": "CRAN",
@@ -1478,6 +2561,21 @@
       "Repository": "CRAN",
       "Requirements": [
         "R",
+=======
+      "Version": "1.8.3",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "058aebddea264f4c99401515182e656a",
+      "Requirements": []
+    },
+    "stringr": {
+      "Package": "stringr",
+      "Version": "1.5.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "960e2ae9e09656611e0b8214ad543207",
+      "Requirements": [
+>>>>>>> Stashed changes
         "cli",
         "glue",
         "lifecycle",
@@ -1485,32 +2583,82 @@
         "rlang",
         "stringi",
         "vctrs"
+<<<<<<< Updated upstream
       ],
       "Hash": "671a4d384ae9d32fc47a14e98bfa3dc8"
+=======
+      ]
+>>>>>>> Stashed changes
     },
     "sys": {
       "Package": "sys",
       "Version": "3.4.2",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
       "Hash": "3a1be13d68d47a8cd0bfd74739ca1555"
+=======
+      "Repository": "RSPM",
+      "Hash": "3a1be13d68d47a8cd0bfd74739ca1555",
+      "Requirements": []
+>>>>>>> Stashed changes
     },
     "systemfonts": {
       "Package": "systemfonts",
-      "Version": "1.0.4",
+      "Version": "1.0.5",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
+=======
+      "Repository": "RSPM",
+      "Hash": "15b594369e70b975ba9f064295983499",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "cpp11"
+<<<<<<< Updated upstream
       ],
       "Hash": "90b28393209827327de889f49935140a"
+=======
+      ]
+    },
+    "testthat": {
+      "Package": "testthat",
+      "Version": "3.2.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "4767a686ebe986e6cb01d075b3f09729",
+      "Requirements": [
+        "R6",
+        "brio",
+        "callr",
+        "cli",
+        "desc",
+        "digest",
+        "evaluate",
+        "jsonlite",
+        "lifecycle",
+        "magrittr",
+        "pkgload",
+        "praise",
+        "processx",
+        "ps",
+        "rlang",
+        "waldo",
+        "withr"
+      ]
+>>>>>>> Stashed changes
     },
     "textshaping": {
       "Package": "textshaping",
-      "Version": "0.3.6",
+      "Version": "0.3.7",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
+=======
+      "Repository": "RSPM",
+      "Hash": "997aac9ad649e0ef3b97f96cddd5622b",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "cpp11",
@@ -1522,9 +2670,15 @@
       "Package": "tibble",
       "Version": "3.2.1",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
       "Requirements": [
         "R",
+=======
+      "Repository": "RSPM",
+      "Hash": "a84e2cc86d07289b3b6f5069df7a004c",
+      "Requirements": [
+>>>>>>> Stashed changes
         "fansi",
         "lifecycle",
         "magrittr",
@@ -1539,11 +2693,19 @@
     },
     "tidyr": {
       "Package": "tidyr",
+<<<<<<< Updated upstream
       "Version": "1.3.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
+=======
+      "Version": "1.3.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "915fb7ce036c22a6a33b5a8adb712eb1",
+      "Requirements": [
+>>>>>>> Stashed changes
         "cli",
         "cpp11",
         "dplyr",
@@ -1564,23 +2726,38 @@
       "Package": "tidyselect",
       "Version": "1.2.0",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
       "Requirements": [
         "R",
+=======
+      "Repository": "RSPM",
+      "Hash": "79540e5fcd9e0435af547d885f184fd5",
+      "Requirements": [
+>>>>>>> Stashed changes
         "cli",
         "glue",
         "lifecycle",
         "rlang",
         "vctrs",
         "withr"
+<<<<<<< Updated upstream
       ],
       "Hash": "79540e5fcd9e0435af547d885f184fd5"
+=======
+      ]
+>>>>>>> Stashed changes
     },
     "tidyverse": {
       "Package": "tidyverse",
       "Version": "2.0.0",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
+=======
+      "Repository": "RSPM",
+      "Hash": "c328568cd14ea89a83bd4ca7f54ae07e",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "broom",
@@ -1627,11 +2804,28 @@
       ],
       "Hash": "8548b44f79a35ba1791308b61e6012d7"
     },
+    "timechange": {
+      "Package": "timechange",
+      "Version": "0.3.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "c5f3c201b931cd6474d17d8700ccb1c8",
+      "Requirements": [
+        "cpp11"
+      ]
+    },
     "tinytex": {
       "Package": "tinytex",
+<<<<<<< Updated upstream
       "Version": "0.45",
       "Source": "Repository",
       "Repository": "CRAN",
+=======
+      "Version": "0.50",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "be7a76845222ad20adb761f462eed3ea",
+>>>>>>> Stashed changes
       "Requirements": [
         "xfun"
       ],
@@ -1639,20 +2833,44 @@
     },
     "tzdb": {
       "Package": "tzdb",
-      "Version": "0.3.0",
+      "Version": "0.4.0",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
+=======
+      "Repository": "RSPM",
+      "Hash": "f561504ec2897f4d46f0c7657e488ae1",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "cpp11"
       ],
       "Hash": "b2e1cbce7c903eaf23ec05c58e59fb5e"
     },
+    "urlchecker": {
+      "Package": "urlchecker",
+      "Version": "1.0.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "409328b8e1253c8d729a7836fe7f7a16",
+      "Requirements": [
+        "cli",
+        "curl",
+        "xml2"
+      ]
+    },
     "usethis": {
       "Package": "usethis",
+<<<<<<< Updated upstream
       "Version": "2.2.0",
       "Source": "Repository",
       "Repository": "CRAN",
+=======
+      "Version": "2.2.3",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "d524fd42c517035027f866064417d7e6",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "cli",
@@ -1681,6 +2899,7 @@
     },
     "utf8": {
       "Package": "utf8",
+<<<<<<< Updated upstream
       "Version": "1.2.3",
       "Source": "Repository",
       "Repository": "CRAN",
@@ -1688,11 +2907,19 @@
         "R"
       ],
       "Hash": "1fe17157424bb09c48a8b3b550c753bc"
+=======
+      "Version": "1.2.4",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "62b65c52671e6665f803ff02954446e9",
+      "Requirements": []
+>>>>>>> Stashed changes
     },
     "uuid": {
       "Package": "uuid",
-      "Version": "1.1-0",
+      "Version": "1.2-0",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
       "Requirements": [
         "R"
@@ -1704,6 +2931,18 @@
       "Version": "0.6.2",
       "Source": "Repository",
       "Repository": "CRAN",
+=======
+      "Repository": "RSPM",
+      "Hash": "303c19bfd970bece872f93a824e323d9",
+      "Requirements": []
+    },
+    "vctrs": {
+      "Package": "vctrs",
+      "Version": "0.6.5",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "c03fa420630029418f7e6da3667aac4a",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "cli",
@@ -1717,6 +2956,7 @@
       "Package": "viridisLite",
       "Version": "0.4.2",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
       "Requirements": [
         "R"
@@ -1728,6 +2968,18 @@
       "Version": "1.6.3",
       "Source": "Repository",
       "Repository": "CRAN",
+=======
+      "Repository": "RSPM",
+      "Hash": "c826c7c4241b6fc89ff55aaea3fa7491",
+      "Requirements": []
+    },
+    "vroom": {
+      "Package": "vroom",
+      "Version": "1.6.5",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "390f9315bc0025be03012054103d227c",
+>>>>>>> Stashed changes
       "Requirements": [
         "R",
         "bit64",
@@ -1746,20 +2998,46 @@
         "tzdb",
         "vctrs",
         "withr"
+<<<<<<< Updated upstream
       ],
       "Hash": "8318e64ffb3a70e652494017ec455561"
+=======
+      ]
+    },
+    "waldo": {
+      "Package": "waldo",
+      "Version": "0.5.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "c7d3fd6d29ab077cbac8f0e2751449e6",
+      "Requirements": [
+        "cli",
+        "diffobj",
+        "fansi",
+        "glue",
+        "rematch2",
+        "rlang",
+        "tibble"
+      ]
+>>>>>>> Stashed changes
     },
     "whisker": {
       "Package": "whisker",
       "Version": "0.4.1",
       "Source": "Repository",
       "Repository": "CRAN",
+<<<<<<< Updated upstream
       "Hash": "c6abfa47a46d281a7d5159d0a8891e88"
+=======
+      "Hash": "c6abfa47a46d281a7d5159d0a8891e88",
+      "Requirements": []
+>>>>>>> Stashed changes
     },
     "withr": {
       "Package": "withr",
-      "Version": "2.5.0",
+      "Version": "3.0.0",
       "Source": "Repository",
+<<<<<<< Updated upstream
       "Repository": "CRAN",
       "Requirements": [
         "R",
@@ -1815,6 +3093,78 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "d98c94dacb7e0efcf83b0a133a705504"
+=======
+      "Repository": "RSPM",
+      "Hash": "d31b6c62c10dcf11ec530ca6b0dd5d35",
+      "Requirements": []
+    },
+    "xfun": {
+      "Package": "xfun",
+      "Version": "0.42",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "fd1349170df31f7a10bd98b0189e85af",
+      "Requirements": []
+    },
+    "xml2": {
+      "Package": "xml2",
+      "Version": "1.3.6",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "1d0336142f4cd25d8d23cd3ba7a8fb61",
+      "Requirements": [
+        "cli",
+        "rlang"
+      ]
+    },
+    "xopen": {
+      "Package": "xopen",
+      "Version": "1.0.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "6c85f015dee9cc7710ddd20f86881f58",
+      "Requirements": [
+        "processx"
+      ]
+    },
+    "xtable": {
+      "Package": "xtable",
+      "Version": "1.8-4",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "b8acdf8af494d9ec19ccb2481a9b11c2",
+      "Requirements": []
+    },
+    "yaml": {
+      "Package": "yaml",
+      "Version": "2.3.8",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "29240487a071f535f5e5d5a323b7afbd",
+      "Requirements": []
+    },
+    "yulab.utils": {
+      "Package": "yulab.utils",
+      "Version": "0.1.4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "60ee2aaa179dc282e9fa7367bad76e89",
+      "Requirements": [
+        "cli",
+        "digest",
+        "fs",
+        "memoise",
+        "rlang"
+      ]
+    },
+    "zip": {
+      "Package": "zip",
+      "Version": "2.3.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "fcc4bd8e6da2d2011eb64a5e5cc685ab",
+      "Requirements": []
+>>>>>>> Stashed changes
     }
   }
 }
