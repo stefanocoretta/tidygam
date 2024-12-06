@@ -1,3 +1,8 @@
+# tidygam 0.2.1
+
+- Fixed language field in DESCRIPTION.
+
+
 # tidygam 0.2.0
 
 ## Added

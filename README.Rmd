@@ -27,7 +27,7 @@ You can install the latest release of tidygam from [GitHub](https://github.com/)
 
 ``` r
 # install.packages("remotes")
-remotes::install_github("stefanocoretta/tidygam@v0.2.0")
+remotes::install_github("stefanocoretta/tidygam@v0.2.1")
 ```
 
 Alternatively, you can install the development version:
