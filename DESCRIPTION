@@ -1,8 +1,8 @@
 Package: tidygam
 Type: Package
 Title: Tidy Prediction and Plotting of Generalised Additive Models
-Version: 0.2.1
-Date: 2023-05-08
+Version: 0.2.2
+Date: 2024-12-07
 Authors@R: 
     c(person(given = "Stefano",
              family = "Coretta",
