@@ -1,4 +1,4 @@
-# tidygam 0.2.0.9000
+# tidygam 0.2.2.9000
 
 ## BREAKING
 
@@ -8,6 +8,15 @@
 
 * Update renv and packages.
 
+
+# tidygam 0.2.2
+
+- Fixed date in DESCRIPTION.
+
+
+# tidygam 0.2.1
+
+- Fixed language field in DESCRIPTION.
 
 
 # tidygam 0.2.0
