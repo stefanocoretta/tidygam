@@ -16,6 +16,8 @@ knitr::opts_chunk$set(
 # tidygam: Tidy Prediction and Plotting of Generalised Additive Models
 
 <!-- badges: start -->
+`r badger::badge_cran_release("tidygam", "blue")`
+`r badger::badge_cran_checks("tidygam")`
 `r badger::badge_devel(color = "orange")`
 <!-- badges: end -->
 
@@ -27,7 +29,7 @@ You can install the latest release of tidygam from [GitHub](https://github.com/)
 
 ``` r
 # install.packages("remotes")
-remotes::install_github("stefanocoretta/tidygam@v0.2.2")
+remotes::install_github("stefanocoretta/tidygam@v1.0.0")
 ```
 
 Alternatively, you can install the development version:
