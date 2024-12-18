@@ -20,7 +20,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">tidygam</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.2</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,7 +59,7 @@
       <h1>Get started</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/stefanocoretta/tidygam/blob/v0.2.2/vignettes/get-started.Rmd" class="external-link"><code>vignettes/get-started.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/stefanocoretta/tidygam/blob/main/vignettes/get-started.Rmd" class="external-link"><code>vignettes/get-started.Rmd</code></a></small>
       <div class="d-none name"><code>get-started.Rmd</code></div>
     </div>
 
@@ -71,6 +71,8 @@
 <span><span class="co">#&gt; Loading required package: nlme</span></span>
 <span><span class="co">#&gt; This is mgcv 1.9-1. For overview type 'help("mgcv-package")'.</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
+<span><span class="co">#&gt; Error in get(paste0(generic, ".", class), envir = get_method_env()) : </span></span>
+<span><span class="co">#&gt;   object 'type_sum.accel' not found</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Attaching package: 'dplyr'</span></span>
 <span><span class="co">#&gt; The following object is masked from 'package:nlme':</span></span>
@@ -162,19 +164,19 @@ cultural backgrounds who participating in a longitudinal study (see
 <code class="sourceCode R"><span><span class="va">gs_pred</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/predict_gam.html">predict_gam</a></span><span class="op">(</span><span class="va">gs</span><span class="op">)</span></span>
 <span><span class="va">gs_pred</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 11 × 5</span></span></span>
-<span><span class="co">#&gt;    months     count        se  lower_ci  upper_ci</span></span>
-<span><span class="co">#&gt;     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl[1d]&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl[1d]&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl[1d]&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl[1d]&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>   10       0.768    0.049<span style="text-decoration: underline;">8</span>     0.670     0.865</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>   10.2     0.896    0.039<span style="text-decoration: underline;">6</span>     0.818     0.973</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>   10.4     1.02     0.034<span style="text-decoration: underline;">0</span>     0.954     1.09 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>   10.6     1.14     0.033<span style="text-decoration: underline;">4</span>     1.07      1.21 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>   10.8     1.25     0.035<span style="text-decoration: underline;">2</span>     1.18      1.32 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>   11       1.35     0.036<span style="text-decoration: underline;">3</span>     1.28      1.42 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>   11.2     1.44     0.034<span style="text-decoration: underline;">6</span>     1.37      1.51 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>   11.4     1.51     0.030<span style="text-decoration: underline;">8</span>     1.45      1.58 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>   11.6     1.58     0.026<span style="text-decoration: underline;">9</span>     1.53      1.64 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>   11.8     1.65     0.026<span style="text-decoration: underline;">5</span>     1.59      1.70 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>   12       1.71     0.031<span style="text-decoration: underline;">5</span>     1.64      1.77</span></span></code></pre></div>
+<span><span class="co">#&gt;    months count     se lower_ci[,1] upper_ci[,1]</span></span>
+<span><span class="co">#&gt;     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>   10   0.768 0.049<span style="text-decoration: underline;">8</span>        0.670        0.865</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>   10.2 0.896 0.039<span style="text-decoration: underline;">6</span>        0.818        0.973</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>   10.4 1.02  0.034<span style="text-decoration: underline;">0</span>        0.954        1.09 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>   10.6 1.14  0.033<span style="text-decoration: underline;">4</span>        1.07         1.21 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>   10.8 1.25  0.035<span style="text-decoration: underline;">2</span>        1.18         1.32 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>   11   1.35  0.036<span style="text-decoration: underline;">3</span>        1.28         1.42 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>   11.2 1.44  0.034<span style="text-decoration: underline;">6</span>        1.37         1.51 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>   11.4 1.51  0.030<span style="text-decoration: underline;">8</span>        1.45         1.58 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>   11.6 1.58  0.026<span style="text-decoration: underline;">9</span>        1.53         1.64 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>   11.8 1.65  0.026<span style="text-decoration: underline;">5</span>        1.59         1.70 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span>   12   1.71  0.031<span style="text-decoration: underline;">5</span>        1.64         1.77</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="plot-predicted-values">Plot predicted values<a class="anchor" aria-label="anchor" href="#plot-predicted-values"></a>
@@ -202,12 +204,14 @@ transform the predicted outcome values with.</p>
 </h2>
 <p>Smooths can be fitted to different levels of a factor using so-called
 <code>by</code>-variables, specified within the smooth function
-<code><a href="https://rdrr.io/pkg/mgcv/man/s.html" class="external-link">s()</a></code> with the <code>by</code> argument.</p>
+<code><a href="https://rdrr.io/pkg/mgcv/man/s.html" class="external-link">s()</a></code> with the <code>by</code> argument. Note that smooths
+are automatically centred so you need to include the
+<code>by</code>-variable as a parametric term too.</p>
 <p>In this model, we fit a smooth along <code>months</code> for each
 background in the data.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">gs_by</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/mgcv/man/gam.html" class="external-link">gam</a></span><span class="op">(</span></span>
-<span>  <span class="va">count</span> <span class="op">~</span> <span class="fu"><a href="https://rdrr.io/pkg/mgcv/man/s.html" class="external-link">s</a></span><span class="op">(</span><span class="va">months</span>, by <span class="op">=</span> <span class="va">background</span>, k <span class="op">=</span> <span class="fl">3</span><span class="op">)</span>,</span>
+<span>  <span class="va">count</span> <span class="op">~</span> <span class="va">background</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/pkg/mgcv/man/s.html" class="external-link">s</a></span><span class="op">(</span><span class="va">months</span>, by <span class="op">=</span> <span class="va">background</span>, k <span class="op">=</span> <span class="fl">3</span><span class="op">)</span>,</span>
 <span>  data <span class="op">=</span> <span class="va">gest</span>,</span>
 <span>  family <span class="op">=</span> <span class="va">poisson</span></span>
 <span><span class="op">)</span></span>
@@ -218,24 +222,26 @@ background in the data.</p>
 <span><span class="co">#&gt; Link function: log </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Formula:</span></span>
-<span><span class="co">#&gt; count ~ s(months, by = background, k = 3)</span></span>
+<span><span class="co">#&gt; count ~ background + s(months, by = background, k = 3)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Parametric coefficients:</span></span>
-<span><span class="co">#&gt;             Estimate Std. Error z value Pr(&gt;|z|)    </span></span>
-<span><span class="co">#&gt; (Intercept)  1.26733    0.02376   53.34   &lt;2e-16 ***</span></span>
+<span><span class="co">#&gt;                   Estimate Std. Error z value Pr(&gt;|z|)    </span></span>
+<span><span class="co">#&gt; (Intercept)        1.36119    0.03930  34.634  &lt; 2e-16 ***</span></span>
+<span><span class="co">#&gt; backgroundChinese -0.06916    0.05694  -1.215  0.22451    </span></span>
+<span><span class="co">#&gt; backgroundEnglish -0.21696    0.05814  -3.731  0.00019 ***</span></span>
 <span><span class="co">#&gt; ---</span></span>
 <span><span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Approximate significance of smooth terms:</span></span>
 <span><span class="co">#&gt;                               edf Ref.df Chi.sq p-value    </span></span>
-<span><span class="co">#&gt; s(months):backgroundBengali 1.941  1.996  98.34  &lt;2e-16 ***</span></span>
-<span><span class="co">#&gt; s(months):backgroundChinese 1.015  1.029 168.53  &lt;2e-16 ***</span></span>
-<span><span class="co">#&gt; s(months):backgroundEnglish 1.000  1.000  39.39  &lt;2e-16 ***</span></span>
+<span><span class="co">#&gt; s(months):backgroundBengali 1.935  1.996  83.24  &lt;2e-16 ***</span></span>
+<span><span class="co">#&gt; s(months):backgroundChinese 1.003  1.006 143.06  &lt;2e-16 ***</span></span>
+<span><span class="co">#&gt; s(months):backgroundEnglish 1.000  1.000  42.38  &lt;2e-16 ***</span></span>
 <span><span class="co">#&gt; ---</span></span>
 <span><span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; R-sq.(adj) =   0.04   Deviance explained = 7.38%</span></span>
-<span><span class="co">#&gt; UBRE = 6.1412  Scale est. = 1         n = 540</span></span></code></pre></div>
+<span><span class="co">#&gt; R-sq.(adj) =  0.0384   Deviance explained = 7.72%</span></span>
+<span><span class="co">#&gt; UBRE = 6.1223  Scale est. = 1         n = 540</span></span></code></pre></div>
 <p>The predictor for comparison is selected with the
 <code>comparison</code> argument in <code><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot()</a></code>.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
@@ -244,7 +250,7 @@ background in the data.</p>
 <span>  <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span>comparison <span class="op">=</span> <span class="st">"background"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="get-started_files/figure-html/gs-by-comp-1.png" width="672"></p>
 <p>Note that the output of <code><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot()</a></code> is a ggplot2 object,
-which can be modified using the ggplot2 machinery.</p>
+which can be modified using ggplot2 functions.</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">gs_by</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="../reference/predict_gam.html">predict_gam</a></span><span class="op">(</span>length_out <span class="op">=</span> <span class="fl">20</span>, series <span class="op">=</span> <span class="st">"months"</span>, tran_fun <span class="op">=</span> <span class="va">exp</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
@@ -255,7 +261,8 @@ which can be modified using the ggplot2 machinery.</p>
 <code>background</code> as <code>by</code>-variables.</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">gs_by_2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/mgcv/man/gam.html" class="external-link">gam</a></span><span class="op">(</span></span>
-<span>  <span class="va">count</span> <span class="op">~</span> <span class="fu"><a href="https://rdrr.io/pkg/mgcv/man/s.html" class="external-link">s</a></span><span class="op">(</span><span class="va">months</span>, by <span class="op">=</span> <span class="va">background</span>, k <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="va">count</span> <span class="op">~</span> <span class="va">gesture</span> <span class="op">+</span> <span class="va">background</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/pkg/mgcv/man/s.html" class="external-link">s</a></span><span class="op">(</span><span class="va">months</span>, by <span class="op">=</span> <span class="va">background</span>, k <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/pkg/mgcv/man/s.html" class="external-link">s</a></span><span class="op">(</span><span class="va">months</span>, by <span class="op">=</span> <span class="va">gesture</span>, k <span class="op">=</span> <span class="fl">3</span><span class="op">)</span>,</span>
 <span>  data <span class="op">=</span> <span class="va">gest</span>,</span>
 <span>  family <span class="op">=</span> <span class="va">poisson</span></span>
@@ -267,29 +274,33 @@ which can be modified using the ggplot2 machinery.</p>
 <span><span class="co">#&gt; Link function: log </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Formula:</span></span>
-<span><span class="co">#&gt; count ~ s(months, by = background, k = 3) + s(months, by = gesture, </span></span>
-<span><span class="co">#&gt;     k = 3)</span></span>
+<span><span class="co">#&gt; count ~ gesture + background + s(months, by = background, k = 3) + </span></span>
+<span><span class="co">#&gt;     s(months, by = gesture, k = 3)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Parametric coefficients:</span></span>
-<span><span class="co">#&gt;             Estimate Std. Error z value Pr(&gt;|z|)    </span></span>
-<span><span class="co">#&gt; (Intercept)  1.23541    0.02447    50.5   &lt;2e-16 ***</span></span>
+<span><span class="co">#&gt;                   Estimate Std. Error z value Pr(&gt;|z|)    </span></span>
+<span><span class="co">#&gt; (Intercept)        1.63549    0.04821  33.927  &lt; 2e-16 ***</span></span>
+<span><span class="co">#&gt; gesturepoint      -0.41072    0.05695  -7.213 5.49e-13 ***</span></span>
+<span><span class="co">#&gt; gesturereach      -0.53554    0.05791  -9.248  &lt; 2e-16 ***</span></span>
+<span><span class="co">#&gt; backgroundChinese -0.06937    0.05693  -1.219 0.222975    </span></span>
+<span><span class="co">#&gt; backgroundEnglish -0.21719    0.05812  -3.737 0.000186 ***</span></span>
 <span><span class="co">#&gt; ---</span></span>
 <span><span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Approximate significance of smooth terms:</span></span>
 <span><span class="co">#&gt;                                   edf    Ref.df Chi.sq  p-value    </span></span>
-<span><span class="co">#&gt; s(months):backgroundBengali 1.906e+00 1.989e+00  59.02  &lt; 2e-16 ***</span></span>
-<span><span class="co">#&gt; s(months):backgroundChinese 1.002e+00 1.003e+00  93.57  &lt; 2e-16 ***</span></span>
-<span><span class="co">#&gt; s(months):backgroundEnglish 1.000e+00 1.001e+00  21.32 5.13e-06 ***</span></span>
-<span><span class="co">#&gt; s(months):gestureho_gv      1.738e+00 1.929e+00  33.63  &lt; 2e-16 ***</span></span>
-<span><span class="co">#&gt; s(months):gesturepoint      4.529e-05 8.986e-05   0.00    0.998    </span></span>
-<span><span class="co">#&gt; s(months):gesturereach      1.004e+00 1.009e+00  25.58 1.14e-06 ***</span></span>
+<span><span class="co">#&gt; s(months):backgroundBengali 1.9226651 1.9925158 54.925  &lt; 2e-16 ***</span></span>
+<span><span class="co">#&gt; s(months):backgroundChinese 1.1043907 1.1961394 84.781  &lt; 2e-16 ***</span></span>
+<span><span class="co">#&gt; s(months):backgroundEnglish 1.0009022 1.0017885 28.978  &lt; 2e-16 ***</span></span>
+<span><span class="co">#&gt; s(months):gestureho_gv      1.0014574 1.0028600  4.207   0.0403 *  </span></span>
+<span><span class="co">#&gt; s(months):gesturepoint      0.0003739 0.0007391  0.000   0.9959    </span></span>
+<span><span class="co">#&gt; s(months):gesturereach      1.2383962 1.4167559 25.127 1.51e-05 ***</span></span>
 <span><span class="co">#&gt; ---</span></span>
 <span><span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; Rank: 12/13</span></span>
-<span><span class="co">#&gt; R-sq.(adj) =  0.0714   Deviance explained = 10.4%</span></span>
-<span><span class="co">#&gt; UBRE = 5.9192  Scale est. = 1         n = 540</span></span></code></pre></div>
+<span><span class="co">#&gt; Rank: 16/17</span></span>
+<span><span class="co">#&gt; R-sq.(adj) =  0.0824   Deviance explained =   13%</span></span>
+<span><span class="co">#&gt; UBRE = 5.7338  Scale est. = 1         n = 540</span></span></code></pre></div>
 <p>Note that models like this one are conceptually equivalent to linear
 models without interactions between the <code>by</code>-variables.</p>
 <p>This is clear when plotting the predictions: notice how the shapes of
@@ -303,6 +314,26 @@ differ in slope (this is the effect of including separate
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_brewer.html" class="external-link">scale_color_brewer</a></span><span class="op">(</span>type <span class="op">=</span> <span class="st">"qual"</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_brewer.html" class="external-link">scale_fill_brewer</a></span><span class="op">(</span>type <span class="op">=</span> <span class="st">"qual"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_grid.html" class="external-link">facet_grid</a></span><span class="op">(</span><span class="op">~</span> <span class="va">background</span><span class="op">)</span></span></code></pre></div>
 <p><img src="get-started_files/figure-html/gs-by-2-plot-1.png" width="672"></p>
+<p>If you wish to plot the effect of specific <code>by</code>-variables,
+you can exclude terms like in the following code chunk. Note that the
+name of terms has to match precisely the name in the model summary and
+that you should exclude both parametric and smooth terms with the same
+<code>by</code>-variable. You also need to pick any level of the
+excluded variable (otherwise the predictions will be repeated for each
+level in the excluded variable, but since the variable is excluded, the
+predictions will be the same).</p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">to_exclude</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"s(months):gestureho_gv"</span>, <span class="st">"s(months):gesturepoint"</span>, <span class="st">"s(months):gesturereach"</span>,</span>
+<span>                <span class="st">"gesturepoint"</span>, <span class="st">"gesturereach"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">gs_by_2</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="../reference/predict_gam.html">predict_gam</a></span><span class="op">(</span>length_out <span class="op">=</span> <span class="fl">20</span>, series <span class="op">=</span> <span class="st">"months"</span>, tran_fun <span class="op">=</span> <span class="va">exp</span>,</span>
+<span>              exclude_terms <span class="op">=</span> <span class="va">to_exclude</span>,</span>
+<span>              <span class="co"># pick any value of the excluded variables.</span></span>
+<span>              values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>gesture <span class="op">=</span> <span class="st">"point"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span>comparison <span class="op">=</span> <span class="st">"background"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_brewer.html" class="external-link">scale_color_brewer</a></span><span class="op">(</span>type <span class="op">=</span> <span class="st">"qual"</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_brewer.html" class="external-link">scale_fill_brewer</a></span><span class="op">(</span>type <span class="op">=</span> <span class="st">"qual"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="get-started_files/figure-html/gs-by-2-plot-2-1.png" width="672"></p>
 <p>The following section illustrates how to specify and plot models with
 the GAM equivalent of classical interactions
 (e.g. <code>background * gesture</code>).</p>
@@ -318,12 +349,12 @@ generalised linear models is by creating a new factor which is the
 interaction of the two or more factors using the
 <code><a href="https://rdrr.io/r/base/interaction.html" class="external-link">interaction()</a></code> function, and include this “factor
 interaction” predictors as a <code>by</code>-variable.</p>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">gest</span> <span class="op">&lt;-</span> <span class="va">gest</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>back_gest <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/interaction.html" class="external-link">interaction</a></span><span class="op">(</span><span class="va">background</span>, <span class="va">gesture</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">gs_i</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/mgcv/man/gam.html" class="external-link">gam</a></span><span class="op">(</span></span>
-<span>  <span class="va">count</span> <span class="op">~</span> <span class="fu"><a href="https://rdrr.io/pkg/mgcv/man/s.html" class="external-link">s</a></span><span class="op">(</span><span class="va">months</span>, by <span class="op">=</span> <span class="va">back_gest</span>, k <span class="op">=</span> <span class="fl">3</span><span class="op">)</span>,</span>
+<span>  <span class="va">count</span> <span class="op">~</span> <span class="va">back_gest</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/pkg/mgcv/man/s.html" class="external-link">s</a></span><span class="op">(</span><span class="va">months</span>, by <span class="op">=</span> <span class="va">back_gest</span>, k <span class="op">=</span> <span class="fl">3</span><span class="op">)</span>,</span>
 <span>  data <span class="op">=</span> <span class="va">gest</span>,</span>
 <span>  family <span class="op">=</span> <span class="va">poisson</span></span>
 <span><span class="op">)</span></span>
@@ -334,35 +365,43 @@ interaction” predictors as a <code>by</code>-variable.</p>
 <span><span class="co">#&gt; Link function: log </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Formula:</span></span>
-<span><span class="co">#&gt; count ~ s(months, by = back_gest, k = 3)</span></span>
+<span><span class="co">#&gt; count ~ back_gest + s(months, by = back_gest, k = 3)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Parametric coefficients:</span></span>
-<span><span class="co">#&gt;             Estimate Std. Error z value Pr(&gt;|z|)    </span></span>
-<span><span class="co">#&gt; (Intercept)  1.22513    0.02466   49.68   &lt;2e-16 ***</span></span>
+<span><span class="co">#&gt;                        Estimate Std. Error z value Pr(&gt;|z|)    </span></span>
+<span><span class="co">#&gt; (Intercept)             1.76112    0.05783  30.452  &lt; 2e-16 ***</span></span>
+<span><span class="co">#&gt; back_gestChinese.ho_gv  0.01249    0.08045   0.155   0.8766    </span></span>
+<span><span class="co">#&gt; back_gestEnglish.ho_gv -0.87624    0.10592  -8.273  &lt; 2e-16 ***</span></span>
+<span><span class="co">#&gt; back_gestBengali.point -1.07758    0.11358  -9.487  &lt; 2e-16 ***</span></span>
+<span><span class="co">#&gt; back_gestChinese.point -1.05327    0.12189  -8.641  &lt; 2e-16 ***</span></span>
+<span><span class="co">#&gt; back_gestEnglish.point -0.19015    0.08283  -2.296   0.0217 *  </span></span>
+<span><span class="co">#&gt; back_gestBengali.reach -0.48164    0.08943  -5.386 7.22e-08 ***</span></span>
+<span><span class="co">#&gt; back_gestChinese.reach -0.81182    0.09928  -8.177 2.91e-16 ***</span></span>
+<span><span class="co">#&gt; back_gestEnglish.reach -1.03646    0.10751  -9.640  &lt; 2e-16 ***</span></span>
 <span><span class="co">#&gt; ---</span></span>
 <span><span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Approximate significance of smooth terms:</span></span>
-<span><span class="co">#&gt;                                    edf Ref.df  Chi.sq  p-value    </span></span>
-<span><span class="co">#&gt; s(months):back_gestBengali.ho_gv 1.944  1.997 197.196  &lt; 2e-16 ***</span></span>
-<span><span class="co">#&gt; s(months):back_gestChinese.ho_gv 1.792  1.957 146.664  &lt; 2e-16 ***</span></span>
-<span><span class="co">#&gt; s(months):back_gestEnglish.ho_gv 1.001  1.002  36.608  &lt; 2e-16 ***</span></span>
-<span><span class="co">#&gt; s(months):back_gestBengali.point 1.904  1.991  13.941 0.000649 ***</span></span>
-<span><span class="co">#&gt; s(months):back_gestChinese.point 1.032  1.063 104.711  &lt; 2e-16 ***</span></span>
-<span><span class="co">#&gt; s(months):back_gestEnglish.point 1.001  1.002  12.431 0.000425 ***</span></span>
-<span><span class="co">#&gt; s(months):back_gestBengali.reach 1.753  1.939   3.005 0.172851    </span></span>
-<span><span class="co">#&gt; s(months):back_gestChinese.reach 1.667  1.889   2.295 0.218191    </span></span>
-<span><span class="co">#&gt; s(months):back_gestEnglish.reach 1.000  1.000   2.655 0.103233    </span></span>
+<span><span class="co">#&gt;                                    edf Ref.df Chi.sq  p-value    </span></span>
+<span><span class="co">#&gt; s(months):back_gestBengali.ho_gv 1.773  1.949 87.901  &lt; 2e-16 ***</span></span>
+<span><span class="co">#&gt; s(months):back_gestChinese.ho_gv 1.002  1.003 72.955  &lt; 2e-16 ***</span></span>
+<span><span class="co">#&gt; s(months):back_gestEnglish.ho_gv 1.001  1.002 40.670  &lt; 2e-16 ***</span></span>
+<span><span class="co">#&gt; s(months):back_gestBengali.point 1.941  1.997 22.153 2.08e-05 ***</span></span>
+<span><span class="co">#&gt; s(months):back_gestChinese.point 1.001  1.001 91.257  &lt; 2e-16 ***</span></span>
+<span><span class="co">#&gt; s(months):back_gestEnglish.point 1.000  1.000  8.542  0.00347 ** </span></span>
+<span><span class="co">#&gt; s(months):back_gestBengali.reach 1.738  1.931  2.725  0.19781    </span></span>
+<span><span class="co">#&gt; s(months):back_gestChinese.reach 1.749  1.937  3.538  0.11830    </span></span>
+<span><span class="co">#&gt; s(months):back_gestEnglish.reach 1.000  1.000  4.261  0.03902 *  </span></span>
 <span><span class="co">#&gt; ---</span></span>
 <span><span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; R-sq.(adj) =  0.074   Deviance explained = 11.5%</span></span>
-<span><span class="co">#&gt; UBRE = 5.8613  Scale est. = 1         n = 540</span></span></code></pre></div>
+<span><span class="co">#&gt; R-sq.(adj) =  0.0999   Deviance explained = 18.8%</span></span>
+<span><span class="co">#&gt; UBRE = 5.3243  Scale est. = 1         n = 540</span></span></code></pre></div>
 <p>When predicting values, the user can use the <code>separate</code>
 argument to specify factor-interaction variables in the model that can
 be split back into their individual components.</p>
 <p>This gives greater flexibility when plotting.</p>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/predict_gam.html">predict_gam</a></span><span class="op">(</span></span>
 <span>  <span class="va">gs_i</span>, tran_fun <span class="op">=</span> <span class="va">exp</span>,</span>
 <span>  separate <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>back_gest <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"background"</span>, <span class="st">"gesture"</span><span class="op">)</span><span class="op">)</span></span>
@@ -383,7 +422,7 @@ speech. For each type (music vs language), the stimuli were either
 structural rules or they did not).</p>
 <p>This is a subset of the original data, including voltage values only
 for electrode 62.</p>
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"struct"</span><span class="op">)</span></span>
 <span><span class="va">struct</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 4,400 × 7</span></span></span>
@@ -403,12 +442,12 @@ for electrode 62.</p>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 1 more variable: stim_gram &lt;fct&gt;</span></span></span></code></pre></div>
 <p>Let’s fit the model with factor smooth interactions
 (<code>bs = "fs"</code>).</p>
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">struct</span> <span class="op">&lt;-</span> <span class="va">struct</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>stim_gram <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/interaction.html" class="external-link">interaction</a></span><span class="op">(</span><span class="va">stimulus.condition</span>, <span class="va">grammar.condition</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">st</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/mgcv/man/bam.html" class="external-link">bam</a></span><span class="op">(</span></span>
-<span>  <span class="va">voltage</span> <span class="op">~</span></span>
+<span>  <span class="va">voltage</span> <span class="op">~</span> <span class="va">stim_gram</span> <span class="op">+</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/pkg/mgcv/man/s.html" class="external-link">s</a></span><span class="op">(</span><span class="va">t</span>, by <span class="op">=</span> <span class="va">stim_gram</span>, k <span class="op">=</span> <span class="fl">5</span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="fu"><a href="https://rdrr.io/pkg/mgcv/man/s.html" class="external-link">s</a></span><span class="op">(</span><span class="va">t</span>, <span class="va">subject</span>, bs <span class="op">=</span> <span class="st">"fs"</span>, m <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>,</span>
 <span>  data <span class="op">=</span> <span class="va">struct</span></span>
@@ -420,52 +459,53 @@ for electrode 62.</p>
 <span><span class="co">#&gt; Link function: identity </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Formula:</span></span>
-<span><span class="co">#&gt; voltage ~ s(t, by = stim_gram, k = 5) + s(t, subject, bs = "fs", </span></span>
-<span><span class="co">#&gt;     m = 1)</span></span>
+<span><span class="co">#&gt; voltage ~ stim_gram + s(t, by = stim_gram, k = 5) + s(t, subject, </span></span>
+<span><span class="co">#&gt;     bs = "fs", m = 1)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Parametric coefficients:</span></span>
-<span><span class="co">#&gt;             Estimate Std. Error t value Pr(&gt;|t|)   </span></span>
-<span><span class="co">#&gt; (Intercept)   0.5139     0.1816    2.83  0.00468 **</span></span>
+<span><span class="co">#&gt;                                 Estimate Std. Error t value Pr(&gt;|t|)    </span></span>
+<span><span class="co">#&gt; (Intercept)                      0.61210    0.19052   3.213  0.00132 ** </span></span>
+<span><span class="co">#&gt; stim_gramMusic.Grammatical       0.22318    0.09401   2.374  0.01763 *  </span></span>
+<span><span class="co">#&gt; stim_gramLanguage.Ungrammatical -0.98969    0.09401 -10.528  &lt; 2e-16 ***</span></span>
+<span><span class="co">#&gt; stim_gramMusic.Ungrammatical     0.37377    0.09401   3.976 7.12e-05 ***</span></span>
 <span><span class="co">#&gt; ---</span></span>
 <span><span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Approximate significance of smooth terms:</span></span>
 <span><span class="co">#&gt;                                         edf Ref.df      F p-value    </span></span>
-<span><span class="co">#&gt; s(t):stim_gramLanguage.Grammatical    2.777  3.187  2.870 0.02385 *  </span></span>
-<span><span class="co">#&gt; s(t):stim_gramMusic.Grammatical       2.607  3.009  4.198 0.00567 ** </span></span>
-<span><span class="co">#&gt; s(t):stim_gramLanguage.Ungrammatical  3.246  3.616  1.561 0.10796    </span></span>
-<span><span class="co">#&gt; s(t):stim_gramMusic.Ungrammatical     3.842  3.961 25.816 &lt; 2e-16 ***</span></span>
-<span><span class="co">#&gt; s(t,subject)                         49.171 89.000  6.185 &lt; 2e-16 ***</span></span>
+<span><span class="co">#&gt; s(t):stim_gramLanguage.Grammatical    2.846  3.249  2.889 0.02137 *  </span></span>
+<span><span class="co">#&gt; s(t):stim_gramMusic.Grammatical       2.627  3.022  4.243 0.00531 ** </span></span>
+<span><span class="co">#&gt; s(t):stim_gramLanguage.Ungrammatical  3.270  3.629  1.620 0.09791 .  </span></span>
+<span><span class="co">#&gt; s(t):stim_gramMusic.Ungrammatical     3.848  3.962 26.467 &lt; 2e-16 ***</span></span>
+<span><span class="co">#&gt; s(t,subject)                         50.511 89.000  6.597 &lt; 2e-16 ***</span></span>
 <span><span class="co">#&gt; ---</span></span>
 <span><span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; R-sq.(adj) =  0.155   Deviance explained = 16.7%</span></span>
-<span><span class="co">#&gt; fREML = 9920.3  Scale est. = 5.1457    n = 4400</span></span></code></pre></div>
+<span><span class="co">#&gt; R-sq.(adj) =  0.202   Deviance explained = 21.4%</span></span>
+<span><span class="co">#&gt; fREML = 9800.7  Scale est. = 4.8605    n = 4400</span></span></code></pre></div>
 <p>When predicting values we want to exclude the factor smooth
 interaction, as we would with random/group-level effects in linear
 models.</p>
 <p>Note that GAM terms to be excluded must be specified as they are
 named in the output of <code><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary()</a></code>.</p>
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/predict_gam.html">predict_gam</a></span><span class="op">(</span></span>
 <span>  <span class="va">st</span>,</span>
 <span>  length_out <span class="op">=</span> <span class="fl">50</span>,</span>
 <span>  series <span class="op">=</span> <span class="st">"t"</span>,</span>
 <span>  exclude_terms <span class="op">=</span> <span class="st">"s(t,subject)"</span>,</span>
+<span>  <span class="co"># Pick any subject: since we are removing the random effect, it does not</span></span>
+<span>  <span class="co"># matter which one you pick, the predictions will be the same</span></span>
+<span>  values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>subject <span class="op">=</span> <span class="st">"03"</span><span class="op">)</span>,</span>
 <span>  separate <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>stim_gram <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"stimulus"</span>, <span class="st">"grammar"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span>comparison <span class="op">=</span> <span class="st">"grammar"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html" class="external-link">geom_hline</a></span><span class="op">(</span>yintercept <span class="op">=</span> <span class="fl">0</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_grid.html" class="external-link">facet_grid</a></span><span class="op">(</span><span class="op">~</span> <span class="va">stimulus</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Warning: There was 1 warning in `dplyr::mutate()`.</span></span>
-<span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> In argument: `fit = rowSums(dplyr::across())`.</span></span>
-<span><span class="co">#&gt; Caused by warning:</span></span>
-<span><span class="co">#&gt; <span style="color: #BBBB00;">!</span> Using `across()` without supplying `.cols` was deprecated in dplyr 1.1.0.</span></span>
-<span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Please supply `.cols` instead.</span></span></code></pre></div>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_grid.html" class="external-link">facet_grid</a></span><span class="op">(</span><span class="op">~</span> <span class="va">stimulus</span><span class="op">)</span></span></code></pre></div>
 <p><img src="get-started_files/figure-html/st-plot-1.png" width="672"></p>
 <p>If the fs interaction is not removed, the predicted smooth for each
 individual level in the fs interaction is returned.</p>
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/predict_gam.html">predict_gam</a></span><span class="op">(</span></span>
 <span>  <span class="va">st</span>,</span>
 <span>  length_out <span class="op">=</span> <span class="fl">50</span>,</span>

@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">tidygam</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.2</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,11 +33,28 @@
   <main id="main" class="col-md-9"><div class="page-header">
 
       <h1>Changelog</h1>
-      <small>Source: <a href="https://github.com/stefanocoretta/tidygam/blob/v0.2.2/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
+      <small>Source: <a href="https://github.com/stefanocoretta/tidygam/blob/main/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
     <div class="section level2">
-<h2 class="pkg-version" data-toc-text="0.2.2" id="tidygam-022">tidygam 0.2.2<a class="anchor" aria-label="anchor" href="#tidygam-022"></a></h2>
+<h2 class="pkg-version" data-toc-text="1.0.0" id="tidygam-100">tidygam 1.0.0<a class="anchor" aria-label="anchor" href="#tidygam-100"></a></h2>
+<div class="section level3">
+<h3 id="soft-breaking-1-0-0">SOFT-BREAKING<a class="anchor" aria-label="anchor" href="#soft-breaking-1-0-0"></a></h3>
+<ul><li><p>Now <code><a href="../reference/predict_gam.html">predict_gam()</a></code> uses the <code>lpmatrix</code> predictions which means that when excluding terms the user will have to set a value for the excluded variable.</p></li>
+<li><p>This is especially relevant when excluding (random) factor smooths: the user should pick a value for the random variable in the smooth to avoid the same predictions being output for all levels in the random variable (see the <code>Get started</code> vignette for examples).</p></li>
+<li><p>Note that older code will still work but will produce duplicated predictions.</p></li>
+</ul></div>
+<div class="section level3">
+<h3 id="changed-1-0-0">Changed<a class="anchor" aria-label="anchor" href="#changed-1-0-0"></a></h3>
+<ul><li>Now <code><a href="../reference/predict_gam.html">predict_gam()</a></code> uses the <code>lpmatrix</code> predictions. It is now possible to exclude any terms, smooth or parametric.</li>
+</ul></div>
+<div class="section level3">
+<h3 id="developer-1-0-0">Developer<a class="anchor" aria-label="anchor" href="#developer-1-0-0"></a></h3>
+<ul><li>Update renv and packages.</li>
+</ul></div>
+</div>
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="0.2.2" id="tidygam-022">tidygam 0.2.2<a class="anchor" aria-label="anchor" href="#tidygam-022"></a></h2><p class="text-muted">CRAN release: 2024-12-07</p>
 <ul><li>Fixed date in DESCRIPTION.</li>
 </ul></div>
     <div class="section level2">
